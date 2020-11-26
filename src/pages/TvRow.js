@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NewPageforRe from "./NewPageforRe"
 import RemovieRow from './RemovieRow'
-
+import "../App.css"
 var movieRows =[]
 var movie_Res =[]
 var title = []
@@ -57,8 +57,11 @@ export class TvRow extends Component {
          })
 
     }
+   
     opennewWindow=()=>{
         
+       
+       
        
        // var popwindow = window.open("","Recommended Movies", "_blank");
        /* popwindow.postMessage({"movieRows":this.state.rows}, 
@@ -73,11 +76,11 @@ export class TvRow extends Component {
            // const res_m =[]
 
 
-           var popwindow = window.open("", "_blank"); 
+           
            this.movieInfo_newWindow()
            
-           popwindow.document.write("<h1>Recommendation Page</h1>"
-           +title);
+           var popwindow = window.open("", "_blank"); 
+           popwindow.document.write('<h1 className=recom-title>Recommendation Page</h1>'+title);
 
            title =[]
           
@@ -85,6 +88,7 @@ export class TvRow extends Component {
     }
 
        getRecommendation =async()=>{
+           
         try{
         
         const tv_id = this.props.tv.id
@@ -92,17 +96,16 @@ export class TvRow extends Component {
 
         let response = await fetch(url)
         const data = await response.json()
-        //console.log(data)
+        
         const results = data.results;
         movie_Res = results
         //console.log(results)
-       // var movieRows =[]
+    
              
              movieRows =[]
             results.forEach((tv) =>
             {
-                //https://image.tmdb.org/t/p/w185/dPj3iAXq0A5L5kwpHh32j0iccY6.jpg
-                //console.log("name of tv show: " +tv.name)
+                
                 tv.poster_path = "https://image.tmdb.org/t/p/w185"+ tv.poster_path
                 tv.name = tv.name
                 tv.overview = tv.overview
@@ -113,6 +116,7 @@ export class TvRow extends Component {
                 movieRows.push(tv)
                 
             })
+
             this.state.r_success = true
             this.setState({
                 rows:movieRows
@@ -120,8 +124,10 @@ export class TvRow extends Component {
              
             
            this.opennewWindow()
-            //movieRows= []
+            
 
+           movieRows= []
+            
         }
         catch(error){
             console.log(error)

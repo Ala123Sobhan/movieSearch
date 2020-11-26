@@ -1,7 +1,28 @@
 .App {
   text-align: center;
 }
+.top-barColor{
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+.input{
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  margin-left: 10;
+  margin-right: 10;
+}
+
+.recom-title{
+  background-color: black;
+  color: "white";
+  display: block;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MovieRow from "./MovieRow"
-//import $ from 'jquery'
+import "../App.css"
 
 export class MovieSearch extends Component {
       
@@ -85,14 +85,17 @@ export class MovieSearch extends Component {
     render() {
         return (
             <div>
-               <h1>Movie Search</h1>
-               <input style={{
+               <h1 style={{paddingLeft:"10px",  fontFamily:"Sofia"}}>Movie Search</h1>
+               <input className ="input" style={{
                    fontSize: 24,
                    display: "block",
-                   width: "99%",
+                   width: "96%",
                    paddingTop: 8,
                    paddingBottom: 8,
-                   paddingLeft: 16
+                   paddingLeft: 20,
+                   paddingRight: 20,
+                   marginLeft: 10,
+                   marginRight: 10
                }}
                onChange={this.handleChange}
                placeholder="Enter a movie......." />

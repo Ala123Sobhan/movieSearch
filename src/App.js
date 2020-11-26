@@ -8,8 +8,9 @@ function App() {
     <div>
     
        <Layout >
-        <Header className="top-barColor" title={<Link style={{textDecoration:"none", fontFamily:"Sofia",color:"white"}}  to ="/">Movie123Search</Link>} scroll>
-
+      
+        <Header className="top-barColor" title={<Link style={{textDecoration:"none", fontFamily:"Sofia",color:"white",fontSize:"25px"}}  to ="/">Movie123Search</Link>} scroll>
+       
         <Navigation>
                
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold" }}className="link"  to="/">Home</Link>

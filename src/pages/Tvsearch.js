@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TvRow from "./TvRow"
+import "../App.css"
 export class Tvsearch extends Component {
     constructor(props) {
         super(props)
@@ -28,8 +29,7 @@ export class Tvsearch extends Component {
             var movieRows =[]
             results.forEach((tv) =>
             {
-                console.log('tv poster path: '+tv.poster_path)
-                //https://image.tmdb.org/t/p/w185/dPj3iAXq0A5L5kwpHh32j0iccY6.jpg
+                
                 tv.poster_path = "https://image.tmdb.org/t/p/w185"+ tv.poster_path
                 //const movieRow = this.getMovieRows(movie)
                 
@@ -50,17 +50,21 @@ export class Tvsearch extends Component {
     render() {
         return (
             <div>
-                <h1>TV SEARCH</h1>
+                <h1 style={{paddingLeft:"10px",  fontFamily:"Sofia"}}>Tv Search</h1>
                 <div>
                
                
-               <input style={{
+               <input className="input"style={{
                    fontSize: 24,
                    display: "block",
-                   width: "99%",
+                   width: "96%",
                    paddingTop: 8,
                    paddingBottom: 8,
-                   paddingLeft: 16
+                   paddingLeft: 20,
+                   paddingRight: 20,
+                   marginLeft: 10,
+                   marginRight: 10
+
                }}
                onChange={this.handleChange}
                placeholder="Enter a tv show...." />

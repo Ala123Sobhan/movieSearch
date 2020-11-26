@@ -79,9 +79,10 @@ export class MovieRow extends Component {
            // const res_m =[]
 
 
-           var popwindow = window.open("", "_blank"); 
+           
            this.movieInfo_newWindow()
            
+           var popwindow = window.open("", "_blank"); 
            popwindow.document.write("<h1>Recommendation Page</h1>"
            +title);
 
@@ -125,7 +126,7 @@ export class MovieRow extends Component {
              
             
            this.opennewWindow()
-            //movieRows= []
+            movieRows= []
 
         }
         catch(error){
@@ -149,7 +150,7 @@ export class MovieRow extends Component {
                         <p>{this.props.movie.overview}</p>
                         <input type="button" onClick={this.viewMovie} value="View" />
                         <input type="button" onClick={this.getRecommendation} value="Get Recommendation"/>
-                        { /*this.state.r_success && <NewPageforRe movie={this.state.rows}/>*/}
+                        
                      </td>
                  </tr>
              </tbody>
