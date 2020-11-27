@@ -98,7 +98,7 @@ export class MovieSearch extends Component {
                    marginRight: 10
                }}
                onChange={this.handleChange}
-               placeholder="Enter a movie......." />
+               placeholder="Enter a movie...." />
                {this.state.rows}
               
             </div>

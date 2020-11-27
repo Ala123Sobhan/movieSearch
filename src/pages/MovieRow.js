@@ -80,11 +80,43 @@ export class MovieRow extends Component {
 
 
            
-           this.movieInfo_newWindow()
+          // this.movieInfo_newWindow()
+        
+          var popwindow = window.open("", "_blank"); 
+          movieRows.forEach((movie)=>{
            
-           var popwindow = window.open("", "_blank"); 
-           popwindow.document.write("<h1>Recommendation Page</h1>"
-           +title);
+           
+            let imgSrc = movie.poster_path
+           
+            //let button = <button onClick={this.viewReMovie}>view</button>
+            console.log(movie.poster_path)
+
+            const info = 
+            "<table>"+
+            "<tbody>"+
+            "<tr>"+
+          
+            '<td><text><img src="' + imgSrc + '"></text></td>'+ 
+
+            "<td>"+ "<h2>"+movie.title+"</h2>" + 
+             "<p>"+movie.overview+"</p>"+
+             "</td>" +
+            
+
+             "</tr>"+
+             "</tbody>"+
+             "</table>"+
+              "<hr>"
+             
+              popwindow.document.write("<h1>Recommendation Page</h1>"
+              +info);
+   
+            //title.push(info)
+         })
+
+           
+        //   var popwindow = window.open("", "_blank"); 
+           //popwindow.document.write("<h1>Recommendation Page</h1>"+title);
 
            title =[]
           

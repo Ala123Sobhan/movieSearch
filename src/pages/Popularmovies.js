@@ -14,7 +14,7 @@ export class Popularmovies extends Component {
     renderPopularInfo= async()=>{
         try{
   
-           let url = "https://api.themoviedb.org/3/movie/popular?api_key=5958134e04ed9ecbbf6100cd3a582d3d&language=en-US&page=1"
+           let url = "https://api.themoviedb.org/3/movie/popular?api_key=5958134e04ed9ecbbf6100cd3a582d3d"
            let response = await fetch(url)
             const data = await response.json()
             const results = data.results;
@@ -43,6 +43,7 @@ export class Popularmovies extends Component {
     }
    
     render() {
+        
         return (
             <div>
                 <h1>style={{paddingLeft:"10px",  fontFamily:"Sofia"}}Poplular Movies</h1>
