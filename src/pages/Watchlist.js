@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Watchlist extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Watchlist</h1>
-            </div>
-        )
-    }
+export const Watchlist = () => {
+    return (
+        <div>
+            <h1>Watchlist Page</h1>
+        </div>
+    )
 }
 
 export default Watchlist
