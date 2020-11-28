@@ -18,7 +18,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/tvsearch">TV Search</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/contact">Contact</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
             </Navigation>
         </Header>
          <Drawer>
@@ -27,7 +27,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/tvsearch">TV Search</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/contact">Contact</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
          </Drawer>
   
         <Content>

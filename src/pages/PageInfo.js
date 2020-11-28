@@ -1,5 +1,5 @@
 import React from 'react'
-import Contact from "./Contact"
+import Watchlist from "./Watchlist"
 import {Switch, Route} from "react-router-dom"
 import MovieSearch from './MovieSearch'
 import Tvsearch from './Tvsearch'
@@ -25,8 +25,8 @@ function PageInfo() {
           </Route>
 
 
-          <Route path="/contact">
-            <Contact/>
+          <Route path="/watchlist">
+            <Watchlist/>
           </Route>
 
           <Route path="/moviesearch">
