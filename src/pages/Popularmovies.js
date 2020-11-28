@@ -22,15 +22,18 @@ export class Popularmovies extends Component {
 
 
            var movieRows =[]
+
             results.forEach((movie) =>
             {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
+                
                 //const movieRow = this.getMovieRows(movie)
                 const movieRow = <MovieRow key={movie.id} movie={movie}/>
-                //console.log(movieRow)
+                console.log(movieRow)
                 movieRows.push(movieRow)
                 
             })
+
             this.setState({
                 rows:movieRows
             })
@@ -46,7 +49,7 @@ export class Popularmovies extends Component {
         
         return (
             <div>
-                <h1>style={{paddingLeft:"10px",  fontFamily:"Sofia"}}Poplular Movies</h1>
+                <h1 style={{paddingLeft:"10px",  fontFamily:"Sofia"}}>Poplular Movies</h1>
                  {this.state.rows}
             
             </div>

@@ -83,6 +83,7 @@ export class MovieRow extends Component {
           // this.movieInfo_newWindow()
         
           var popwindow = window.open("", "_blank"); 
+          popwindow.document.write("<h1>Recommendation Page</h1>");
           movieRows.forEach((movie)=>{
            
            
@@ -108,8 +109,7 @@ export class MovieRow extends Component {
              "</table>"+
               "<hr>"
              
-              popwindow.document.write("<h1>Recommendation Page</h1>"
-              +info);
+              popwindow.document.write(info);
    
             //title.push(info)
          })

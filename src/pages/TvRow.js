@@ -32,8 +32,7 @@ export class TvRow extends Component {
            
             let imgSrc = tv.poster_path
            
-            //let button = <button onClick={this.viewReMovie}>view</button>
-            //console.log(movie.poster_path)
+           
 
             const info = 
             "<table>"+
@@ -77,10 +76,38 @@ export class TvRow extends Component {
 
 
            
-           this.movieInfo_newWindow()
+           //this.movieInfo_newWindow()
            
            var popwindow = window.open("", "_blank"); 
-           popwindow.document.write('<h1 className=recom-title>Recommendation Page</h1>'+title);
+           popwindow.document.write( '<h1 className=recom-title>Recommendation Page</h1>')
+           movieRows.forEach((tv)=>{
+           
+           
+            let imgSrc = tv.poster_path
+           
+           
+
+            const info = 
+            "<table>"+
+            "<tbody>"+
+            "<tr>"+
+          
+            '<td><text><img src="' + imgSrc + '"></text></td>'+ 
+
+            "<td>"+ "<h2>"+tv.name+"</h2>" + 
+             "<p>"+tv.overview+"</p>"+
+             "</td>" +
+            
+
+             "</tr>"+
+             "</tbody>"+
+             "</table>"+
+              "<hr>"
+             
+              popwindow.document.write(info);
+           // title.push(info)
+         })
+         //  popwindow.document.write('<h1 className=recom-title>Recommendation Page</h1>'+title);
 
            title =[]
           
