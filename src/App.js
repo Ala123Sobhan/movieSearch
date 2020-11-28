@@ -19,6 +19,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watched">Watched</Link>
             </Navigation>
         </Header>
          <Drawer>
@@ -28,6 +29,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watched">Watched</Link>
          </Drawer>
   
         <Content>

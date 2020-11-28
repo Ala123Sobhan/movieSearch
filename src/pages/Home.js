@@ -17,12 +17,11 @@ export class Home extends Component {
                             </td>
                             <td width="2"/>
                             <td>
-                              <h1>Movie123Search</h1>
+                            <h1>Movie123Search</h1>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-               
             </div>
         )
     }
