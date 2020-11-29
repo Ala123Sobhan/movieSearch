@@ -68,16 +68,14 @@ export class MovieSearch extends Component {
     render() {
         return (
             <div class="movieSearch-container">
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Movie Search</h1>
+                <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}> Movie Search</h1>
                 <input className ="input" style={{
                     fontSize: 24,
                     display: "block",
                     width: "95%",
                     paddingTop: 8,
                     paddingBottom: 8,
-                    paddingLeft: 20,
                     paddingRight: 20,
-                    marginLeft: 10,
                     marginRight: 10
                 }}
                 onChange={this.handleChange}

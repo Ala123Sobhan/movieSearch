@@ -46,32 +46,25 @@ export class Tvsearch extends Component {
             console.log(" here: "+error)
         }
     }
-   
+
     render() {
         return (
-            <div>
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Tv Search</h1>
+            <div class="tvSearch-container">
+                <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}> TV Search </h1>
                 <div>
-               
-               
-               <input className="input"style={{
-                   fontSize: 24,
-                   display: "block",
-                   width: "96%",
-                   paddingTop: 8,
-                   paddingBottom: 8,
-                   paddingLeft: 20,
-                   paddingRight: 20,
-                   marginLeft: 10,
-                   marginRight: 10
-
-               }}
-               onChange={this.handleChange}
-               placeholder="Enter a tv show...." />
-               {this.state.rows}
-              
-            </div>
-             
+                <input className="input"style={{
+                    fontSize: 24,
+                    display: "block",
+                    width: "96%",
+                    paddingTop: 8,
+                    paddingBottom: 8,
+                    paddingRight: 20,
+                    marginRight: 10
+                }}
+                onChange={this.handleChange}
+                placeholder="Enter a TV show...." />
+                {this.state.rows}
+                </div>
             </div>
         )
     }
