@@ -10,17 +10,16 @@ import Home from './Home'
 
 function PageInfo() {
     return (
-        <div>
+        <div class="info-container">
           <Switch>
             <Route path="/tvsearch"> < Tvsearch/> </Route>
             <Route path="/topratedmovies"> <Topratedmovies /> </Route>
             <Route path="/popularmovies"> < Popularmovies/> </Route>
             <Route path="/watchlist"> <Watchlist/> </Route>
             <Route path="/moviesearch"> < MovieSearch/> </Route>
-            <Route path="/watched"> < Watched/> </Route>
+            {/* <Route path="/watched"> < Watched/> </Route> */}
             <Route path="/"> < Home/> </Route>
           </Switch>
-
         </div>
     )
 }

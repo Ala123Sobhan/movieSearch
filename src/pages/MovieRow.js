@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import NewPageforRe from "./NewPageforRe"
 import RemovieRow from './RemovieRow'
 
-
 var movieRows =[]
 var movie_Res =[]
 var title = []
@@ -11,8 +10,8 @@ export class MovieRow extends Component {
         super(props)
     
         this.state = {
-             rows: [],
-             r_success: false
+            rows: [],
+            r_success: false
         }
     }
     
@@ -32,12 +31,10 @@ export class MovieRow extends Component {
     }
 
     movieInfo_newWindow=()=>{
-       
+
             movieRows.forEach((movie)=>{
-           
-           
             let imgSrc = movie.poster_path
-           
+        
             //let button = <button onClick={this.viewReMovie}>view</button>
             console.log(movie.poster_path)
 
@@ -45,85 +42,67 @@ export class MovieRow extends Component {
             "<table>"+
             "<tbody>"+
             "<tr>"+
-          
+        
             '<td><text><img src="' + imgSrc + '"></text></td>'+ 
 
             "<td>"+ "<h2>"+movie.title+"</h2>" + 
-             "<p>"+movie.overview+"</p>"+
-             "</td>" +
+            "<p>"+movie.overview+"</p>"+
+            "</td>" +
             
 
-             "</tr>"+
-             "</tbody>"+
-             "</table>"+
-              "<hr>"
-             
+            "</tr>"+
+            "</tbody>"+
+            "</table>"+
+            "<hr>"
             
             title.push(info)
-         })
-
+        })
     }
+
     opennewWindow=()=>{
+        // var popwindow = window.open("","Recommended Movies", "_blank");
+        /* popwindow.postMessage({"movieRows":this.state.rows}, 
+        'http://localhost:3001/recommendation');*/
         
-       
-       // var popwindow = window.open("","Recommended Movies", "_blank");
-       /* popwindow.postMessage({"movieRows":this.state.rows}, 
-           'http://localhost:3001/recommendation');*/
-         
-         
           // console.log("MOVIE ROWS---"+movieRows)
          //  const windowInfo = movieRows.length
-
-          // var movie_c = movie_Res[0]
-          
-           // const res_m =[]
-
-
-           
-          // this.movieInfo_newWindow()
+        // var movie_c = movie_Res[0]
+        // const res_m =[]
+        // this.movieInfo_newWindow()
+        var popwindow = window.open("", "_blank"); 
+        popwindow.document.write("<h1>Recommendation Page</h1>");
+        movieRows.forEach((movie)=>{
+        let imgSrc = movie.poster_path
         
-          var popwindow = window.open("", "_blank"); 
-          popwindow.document.write("<h1>Recommendation Page</h1>");
-          movieRows.forEach((movie)=>{
-           
-           
-            let imgSrc = movie.poster_path
-           
-            //let button = <button onClick={this.viewReMovie}>view</button>
-            console.log(movie.poster_path)
+        //let button = <button onClick={this.viewReMovie}>view</button>
+        console.log(movie.poster_path)
+        const info = 
+        "<table>"+
+        "<tbody>"+
+        "<tr>"+
+        
+        '<td><text><img src="' + imgSrc + '"></text></td>'+ 
 
-            const info = 
-            "<table>"+
-            "<tbody>"+
-            "<tr>"+
-          
-            '<td><text><img src="' + imgSrc + '"></text></td>'+ 
-
-            "<td>"+ "<h2>"+movie.title+"</h2>" + 
-             "<p>"+movie.overview+"</p>"+
-             "</td>" +
+        "<td>"+ "<h2>"+movie.title+"</h2>" + 
+        "<p>"+movie.overview+"</p>"+
+        "</td>" +
             
+        "</tr>"+
+        "</tbody>"+
+        "</table>"+
+        "<hr>"
+        popwindow.document.write(info);
 
-             "</tr>"+
-             "</tbody>"+
-             "</table>"+
-              "<hr>"
-             
-              popwindow.document.write(info);
-   
-            //title.push(info)
-         })
-
-           
+        //title.push(info)
+        })
+        
         //   var popwindow = window.open("", "_blank"); 
-           //popwindow.document.write("<h1>Recommendation Page</h1>"+title);
+        //popwindow.document.write("<h1>Recommendation Page</h1>"+title);
 
-           title =[]
-          
+        title =[]
 
     }
-
-       getRecommendation =async()=>{
+    getRecommendation =async()=>{
         try{
         
         const movie_id = this.props.movie.id
@@ -137,17 +116,14 @@ export class MovieRow extends Component {
         movie_Res = results
        // console.log(results)
        // var movieRows =[]
-             
-             movieRows =[]
+            movieRows =[]
             results.forEach((movie) =>
             {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
                 movie.title = movie.title
                 movie.overview = movie.overview
                // const movieRow = <RemovieRow key ={movie.id} movie={movie}/>
-                   
               //  console.log(movie)
-               
                 movieRows.push(movie)
                 
             })
@@ -155,40 +131,36 @@ export class MovieRow extends Component {
             this.setState({
                 rows:movieRows
             })
-             
             
-           this.opennewWindow()
+        this.opennewWindow()
             movieRows= []
 
         }
         catch(error){
             console.log(error)
         }
-
     }
     
     render() {
         return (
             <div>
-             <table key ={this.props.movie.id}>
-             <tbody>
-                 <tr>
-                     <td>
-                         <img alt ="poster" src ={this.props.movie.poster_path}/>
-                     </td>
- 
-                     <td>
+            <table key ={this.props.movie.id}>
+            <tbody>
+                <tr>
+                    <td>
+                        <img alt ="poster" src ={this.props.movie.poster_path}/>
+                    </td>
+
+                    <td>
                         <h3> {this.props.movie.title} </h3>
                         <p>{this.props.movie.overview}</p>
                         <input type="button" onClick={this.viewMovie} value="View" />
                         <input type="button" onClick={this.getRecommendation} value="Get Recommendation"/>
-                        
-                     </td>
-                 </tr>
-             </tbody>
-         </table>
-         </div>
-            
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
         )
     }
 }

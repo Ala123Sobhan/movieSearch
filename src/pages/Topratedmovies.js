@@ -46,7 +46,7 @@ export class Topratedmovies extends Component {
     render() {
         return (
             <div>
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Sofia"}}>Top Rated Movies</h1>
+                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Top Rated Movies</h1>
                  {this.state.rows}
             
             </div>
