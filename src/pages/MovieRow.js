@@ -150,17 +150,16 @@ export class MovieRow extends Component {
                     <td>
                         <img alt ="poster" src ={this.props.movie.poster_path}/>
                     </td>
-
                     <td>
                         <h3> {this.props.movie.title} </h3>
                         <p>{this.props.movie.overview}</p>
-                        <input type="button" onClick={this.viewMovie} value="View" />
-                        <input type="button" onClick={this.getRecommendation} value="Get Recommendation"/>
+                        <buttons className="btn" onClick={this.viewMovie} value="View"> View </buttons>
+                        <buttons className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </buttons>
                     </td>
                 </tr>
             </tbody>
-        </table>
-        </div>
+            </table>
+            </div>
         )
     }
 }

@@ -90,10 +90,19 @@
   line-height: 2rem;
 }
 
+/***************/
+/* Movie Search Page */
+/***************/
+
+.movieSearch-container{
+  padding: 2rem;
+}
+
+
 .btn {
   padding: 10px 15px;
-  background-color: #10db79;
-  color: var(--primary);
+  background-color: #CB11F2;
+  color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -102,10 +111,11 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
+  margin: 1rem;
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color: #ec16e2;
   opacity: 1;
   cursor: pointer;
 }

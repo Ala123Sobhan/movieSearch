@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Home extends Component {
     render() {
         return (
-            <div>
+            <div class="info-container">
                 <table style={{
                     backgroundColor:"black",
                     display:"block",
