@@ -1,49 +1,45 @@
-import React, { Component } from 'react'
-import NewPageforRe from "./NewPageforRe"
-import RemovieRow from './RemovieRow'
-import "../App.css"
+import React, { Component} from 'react';
+import {useContext } from 'react';
+import {GlobalContext} from '../context/GlobalState';
+import NewPageforRe from "./NewPageforRe";
+import RemovieRow from './RemovieRow';
+import "../App.css";
+
 var movieRows =[]
 var movie_Res =[]
 var title = []
 
 export class TvRow extends Component {
+    
     constructor(props) {
         super(props)
-    
+        
         this.state = {
              rows: [],
              r_success: false
         }
     }
+
+    
     viewTv=()=>{
         //onsole.log("in view movie--"+this.props.tv.name)
-        
         const url = "https://www.themoviedb.org/tv/"+this.props.tv.id
         //window.location.href = url
         window.open( url, "_blank");
     }
-    
-   
 
     movieInfo_newWindow=()=>{
-       
             movieRows.forEach((tv)=>{
-           
-           
             let imgSrc = tv.poster_path
-           
-           
-
             const info = 
             "<table>"+
             "<tbody>"+
             "<tr>"+
-          
             '<td><text><img src="' + imgSrc + '"></text></td>'+ 
 
             "<td>"+ "<h2>"+tv.name+"</h2>" + 
-             "<p>"+tv.overview+"</p>"+
-             "</td>" +
+            "<p>"+tv.overview+"</p>"+
+            "</td>" +
             
 
              "</tr>"+
@@ -173,16 +169,18 @@ export class TvRow extends Component {
                          <img alt ="poster" src ={this.props.tv.poster_path}/>
                      </td>
  
-                     <td>
+                    <td>
                         <h3> {this.props.tv.name} </h3>
                         <p>{this.props.tv.overview}</p>
                         <input type="button" onClick={this.viewTv} value="View" />
                         <input type="button" onClick={this.getRecommendation} value="Get Recommendation"/>
-                     
-                     </td>
-                 </tr>
-             </tbody>
-         </table>
+                        <button className="btn" onClick={() => addMovieToWatchList(this.props.tv)}> Add to Watchlist </button>
+                        
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
             </div>
         )
     }

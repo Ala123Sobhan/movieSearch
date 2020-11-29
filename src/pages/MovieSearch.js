@@ -3,14 +3,13 @@ import MovieRow from "./MovieRow"
 import "../App.css"
 
 export class MovieSearch extends Component {
-      
+    
     constructor(props) {
         super(props)
     
         this.state ={
             rows:[]
         }
-      
 
        //this.performSearch()
        //this.renderMovieInfo()
@@ -22,7 +21,7 @@ export class MovieSearch extends Component {
         this.renderMovieInfo(searchTerm)
     }
     getMovieRows =(obj)=>{
-      
+    
         return (
             <div><table key ={obj.id}>
             <tbody>

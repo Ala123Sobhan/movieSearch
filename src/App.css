@@ -63,7 +63,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
 .btn {
   padding: 10px 15px;
-  background-color: var(--secondary);
+  background-color: #10db79;
   color: var(--primary);
   border-radius: 5px;
   text-transform: uppercase;

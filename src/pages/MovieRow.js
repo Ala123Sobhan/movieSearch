@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import NewPageforRe from "./NewPageforRe"
 import RemovieRow from './RemovieRow'
 
+
 var movieRows =[]
 var movie_Res =[]
 var title = []
@@ -17,15 +18,14 @@ export class MovieRow extends Component {
     
     viewMovie=()=>{
         console.log("in view movie--"+this.props.movie.title)
-        
         const url = "https://www.themoviedb.org/movie/"+this.props.movie.id
         //window.location.href = url
-        window.open( url, "_blank");
+        window.open(url, "_blank");
     }
     
     viewReMovie=(id)=>{
-      console.log("movie id --"+id)
-      const url = "https://www.themoviedb.org/movie/"+id
+    console.log("movie id --"+id)
+    const url = "https://www.themoviedb.org/movie/"+id
       //window.location.href = url
      // window.open( url, "_blank");
 
