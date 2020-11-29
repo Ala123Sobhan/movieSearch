@@ -49,7 +49,7 @@ export class Popularmovies extends Component {
         
         return (
             <div>
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Sofia"}}>Poplular Movies</h1>
+                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Poplular Movies</h1>
                  {this.state.rows}
             
             </div>

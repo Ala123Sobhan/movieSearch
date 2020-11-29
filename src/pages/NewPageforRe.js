@@ -5,13 +5,10 @@ export class NewPageforRe extends Component {
         super(props)
     
         this.state = {
-             
+            
         }
     }
 
-
-
-  
     showTable =()=>{
         //console.log('in show table')
         const movies = this.props.movie
