@@ -174,8 +174,7 @@ export class TvRow extends Component {
                         <p>{this.props.tv.overview}</p>
                         <input type="button" onClick={this.viewTv} value="View" />
                         <input type="button" onClick={this.getRecommendation} value="Get Recommendation"/>
-                        <button className="btn" onClick={() => addMovieToWatchList(this.props.tv)}> Add to Watchlist </button>
-                        
+                    
                     
                     </td>
                 </tr>
