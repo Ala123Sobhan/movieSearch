@@ -3,8 +3,9 @@ import AppReducer from './AppReducer';
 // initial state
 
 const initialState = {
-    watchList: [],
-    watched: [],
+    watchlist: localStorage.getItem("watchlist")
+    ? JSON.parse(localStorage.getItem("watchlist"))
+    : [],
 };
 
 // context
@@ -15,13 +16,20 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = props => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
-// actions
-    const addMovieToWatchList = (movie) =>{
-        dispatch({type: "ADD_MOVIE_TO_WATCHLIST", payload: movie})
-    };
+    useEffect(() => {
+        localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
+      }, [state]);
 
+// actions
+    const addMovieToWatchlist = (movie) => {
+    dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
+  };
+ // this.handleDetails.bind(this)
     return(
-        <GlobalContext.Provider value={{watchList: state.watchList, watched: state.watched, addMovieToWatchList,}}>
+        <GlobalContext.Provider 
+        value={{watchlist: state.watchlist, 
+            addMovieToWatchlist:addMovieToWatchlist,
+        }}>
             {props.children}
         </GlobalContext.Provider>
     )

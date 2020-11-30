@@ -153,8 +153,8 @@ export class MovieRow extends Component {
                     <td>
                         <h3> {this.props.movie.title} </h3>
                         <p>{this.props.movie.overview}</p>
-                        <buttons className="btn" onClick={this.viewMovie} value="View"> View </buttons>
-                        <buttons className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </buttons>
+                        <button className="btn" onClick={this.viewMovie} value="View"> View </button>
+                        <button className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </button>
                     </td>
                 </tr>
             </tbody>

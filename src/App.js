@@ -3,11 +3,11 @@ import './lib/font-awesome/css/all.min.css';
 import {Layout, Header, Navigation, Content, Drawer} from "react-mdl"
 import {Link} from "react-router-dom"
 import PageInfo from "./pages/PageInfo";
-import {GlobalProvider} from './context/GlobalState'
+//import {GlobalProvider} from './context/GlobalState'
 
 function App() {
   return (
-    <GlobalProvider>
+   // <GlobalProvider>
     <div>
       <Layout style={{color:"#CB11F2"}}>
       
@@ -39,7 +39,7 @@ function App() {
         </Content>
     </Layout>
     </div>
-    </GlobalProvider>
+   // </GlobalProvider>
 
   );
 }
