@@ -4,12 +4,25 @@ import {GlobalContext} from '../context/GlobalState';
 var movieRows =[]
 var movie_Res =[]
 var title = []
+
 function MovieRows(props) {
 
     const {
         addMovieToWatchlist, 
         watchlist,
       } = useContext(GlobalContext);
+
+    
+
+    const check_Disability =(id)=>{
+     
+      
+        let storedMovie = watchlist.find((o) => o.movie.id === id);
+        let watchlistDisabled = storedMovie ? true : false
+        console.log(watchlistDisabled)
+         return watchlistDisabled
+  
+    }
 
     const viewMovie=()=>{
         console.log("in view movie--"+props.movie.title)
@@ -128,9 +141,10 @@ function MovieRows(props) {
                         <p>{props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
-                        <button className="btn"
-                         // disabled={watchlistDisabled}
+                         <button className="btn"
+                          disabled={check_Disability(props.movie.id)}
                          onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
+                        
                     </td>
                 </tr>
             </tbody>

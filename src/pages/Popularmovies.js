@@ -29,7 +29,7 @@ export class Popularmovies extends Component {
                 
                 //const movieRow = this.getMovieRows(movie)
                 const movieRow = <MovieRows key={movie.id} movie={movie}/>
-                console.log(movieRow)
+              //  console.log(movieRow)
                 movieRows.push(movieRow)
                 
             })
