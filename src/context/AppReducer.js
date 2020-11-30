@@ -5,6 +5,11 @@ export default (state, action) => {
             ...state,
             watchlist:[action.payload, ...state.watchlist],
         }
+        case "ADD_TV_TO_WATCHLIST":
+        return {
+            ...state,
+            tv_watchlist:[action.payload, ...state.tv_watchlist],
+        }
 
         default:
             return state;

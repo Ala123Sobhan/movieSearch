@@ -6,6 +6,22 @@ var movie_Res =[]
 var title = []
 function TvRows(props) {
 
+    const {
+        addTvToWatchlist, 
+        tv_watchlist,
+      } = useContext(GlobalContext);
+
+      const check_Disability =(id)=>{
+     
+      
+        let storedMovie = tv_watchlist.find((o) => o.tv.id === id);
+        let watchlistDisabled = storedMovie ? true : false
+        console.log(watchlistDisabled)
+         return watchlistDisabled
+  
+    }
+
+
    
     const  viewTv=()=>{
         //onsole.log("in view movie--"+this.props.tv.name)
@@ -137,7 +153,9 @@ const opennewWindow=()=>{
 
                         <button className="btn" onClick={viewTv} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
-                      
+                        <button className="btn"
+                          disabled={check_Disability(props.tv.id)}
+                         onClick={()=>addTvToWatchlist(props)}> Add To Watchlist </button>
                     </td>
                 </tr>
             </tbody>
