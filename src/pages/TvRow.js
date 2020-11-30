@@ -15,8 +15,8 @@ export class TvRow extends Component {
         super(props)
         
         this.state = {
-             rows: [],
-             r_success: false
+            rows: [],
+            r_success: false
         }
     }
 
@@ -70,7 +70,6 @@ export class TvRow extends Component {
           
            // const res_m =[]
 
-
            
            //this.movieInfo_newWindow()
            
@@ -123,9 +122,8 @@ export class TvRow extends Component {
         const results = data.results;
         movie_Res = results
         //console.log(results)
-    
-             
-             movieRows =[]
+            
+            movieRows =[]
             results.forEach((tv) =>
             {
                 
@@ -133,9 +131,7 @@ export class TvRow extends Component {
                 tv.name = tv.name
                 tv.overview = tv.overview
                // const movieRow = <RemovieRow key ={movie.id} movie={movie}/>
-                   
               //  console.log(movie)
-               
                 movieRows.push(tv)
                 
             })
@@ -144,12 +140,12 @@ export class TvRow extends Component {
             this.setState({
                 rows:movieRows
             })
-             
             
-           this.opennewWindow()
+            
+        this.opennewWindow()
             
 
-           movieRows= []
+        movieRows= []
             
         }
         catch(error){
@@ -162,13 +158,12 @@ export class TvRow extends Component {
         //console.log(this.props)
         return (
             <div>
-                 <table key ={this.props.tv.id}>
-             <tbody>
-                 <tr>
-                     <td>
-                         <img alt ="poster" src ={this.props.tv.poster_path}/>
-                     </td>
- 
+                <table key ={this.props.tv.id}>
+            <tbody>
+                <tr>
+                    <td>
+                        <img alt ="poster" src ={this.props.tv.poster_path}/>
+                    </td>
                     <td>
                         <h3> {this.props.tv.name} </h3>
                         <p>{this.props.tv.overview}</p>
@@ -186,3 +181,5 @@ export class TvRow extends Component {
 }
 
 export default TvRow
+
+

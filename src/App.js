@@ -9,7 +9,7 @@ function App() {
   return (
    // <GlobalProvider>
     <div>
-      <Layout style={{color:"#CB11F2"}}>
+      <Layout>
       
         <Header className="top-barColor" title={<Link style={{textDecoration:"none", fontFamily:"Montserrat",color:"white",fontSize:"25px"}}  to ="/">Movie123Search</Link>} scroll>
       

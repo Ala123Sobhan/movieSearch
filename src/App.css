@@ -98,6 +98,22 @@
   padding: 2rem;
 }
 
+/***************/
+/* Movie Displays */
+/***************/
+
+.movie-display{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/***************/
+/* TV Search Page */
+/***************/
+
+.tvSearch-container{
+  padding: 2rem;
+}
 
 .btn {
   padding: 10px 15px;
@@ -112,6 +128,22 @@
   transition: all 0.3s ease;
   line-height: 1.1;
   margin: 1rem;
+}
+
+/***************/
+/* Top Rated Page */
+/***************/
+
+.topRated-container{
+  padding: 2rem;
+}
+
+/***************/
+/* Popular Movie Page */
+/***************/
+
+.popular-container{
+  padding: 2rem;
 }
 
 .btn:hover {
