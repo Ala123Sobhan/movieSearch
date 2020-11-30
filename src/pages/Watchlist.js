@@ -5,8 +5,8 @@ import { GlobalContext } from "../context/GlobalState";
 export const Watchlist = () => {
    const {watchlist,tv_watchlist} = useContext(GlobalContext);
 
-    console.log(watchlist)
-    console.log("tv-"+tv_watchlist.tv)
+    //console.log(watchlist)
+   // console.log("tv-"+tv_watchlist)
 
    /* {tv_watchlist.forEach((list)=>{
        list_title.push(list.tv.name)

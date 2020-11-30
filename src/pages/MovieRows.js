@@ -19,7 +19,7 @@ function MovieRows(props) {
       
         let storedMovie = watchlist.find((o) => o.movie.id === id);
         let watchlistDisabled = storedMovie ? true : false
-        console.log(watchlistDisabled)
+        //console.log(watchlistDisabled)
          return watchlistDisabled
   
     }

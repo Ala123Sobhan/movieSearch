@@ -16,7 +16,7 @@ function TvRows(props) {
       
         let storedMovie = tv_watchlist.find((o) => o.tv.id === id);
         let watchlistDisabled = storedMovie ? true : false
-        console.log(watchlistDisabled)
+        //console.log(watchlistDisabled)
          return watchlistDisabled
   
     }
