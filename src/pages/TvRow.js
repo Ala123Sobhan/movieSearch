@@ -173,8 +173,8 @@ export class TvRow extends Component {
                         <h3> {this.props.tv.name} </h3>
                         <p>{this.props.tv.overview}</p>
 
-                        <buttons className="btn" onClick={this.viewTv} value="View"> View </buttons>
-                        <buttons className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </buttons>
+                        <button className="btn" onClick={this.viewTv} value="View"> View </button>
+                        <button className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </button>
 
                     </td>
                 </tr>
