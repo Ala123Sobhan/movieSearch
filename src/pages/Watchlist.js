@@ -26,7 +26,12 @@ const {watchlist,tv_watchlist} = useContext(GlobalContext);
             {
                 watchlist.map((list, i)=>(
                     <div key ={i}>
-                    <img src ={list.movie.poster_path} alt="poster"/>
+                        <div class="card-container">
+                            <img src ={list.movie.poster_path} alt="poster"/>
+                            <div class="btn-rows">
+                                <button class="ctrl-btn"> Delete </button>
+                            </div>
+                        </div>
                     </div>
                 ))
             }

@@ -308,7 +308,7 @@ header .nav-links li:last-child {
 
 @media (min-width: 992px) {
   .movie-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -320,7 +320,7 @@ header .nav-links li:last-child {
 
 @media (min-width: 992px) {
   .tv-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -372,7 +372,6 @@ header .nav-links li:last-child {
 
 .ctrl-btn {
   color: black;
-  top: 40%;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -382,7 +381,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: black;
+  color: red;
   cursor: pointer;
 }
 
@@ -403,16 +402,14 @@ header .nav-links li:last-child {
 }
 
 .card-container{
-  width: 78%;
+  width: 96%;
   display: grid;
   grid-template-columns: 1fr;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .card-container:hover{
-  cursor: pointer;
   background-color: rgba(0,0,0,.4);
-  border: 1px solid rgba(0,0,0,.3);
 }
 
 .btn-rows{
