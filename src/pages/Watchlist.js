@@ -19,7 +19,7 @@ const {watchlist,tv_watchlist} = useContext(GlobalContext);
     })
 */
     return (
-        <div>
+        <div class="watchlist-container">
             <h1 style={{fontSize:"60px"}}>Watchlist Page</h1>
             <h2>Movie Watchlist</h2>
             <div className="movie-grid">
@@ -27,27 +27,26 @@ const {watchlist,tv_watchlist} = useContext(GlobalContext);
                 watchlist.map((list, i)=>(
                     <div key ={i}>
                     <img src ={list.movie.poster_path} alt="poster"/>
-                        <div className="movie-grid">
-                            {watchlist.map(movie => {
-                                <MovieCard movie={movie} type="watchlist"></MovieCard>
-                            })}
-                        </div>
-                    <hr/>
                     </div>
                 ))
             }
             </div>
             
             <h2>TV Watchlist</h2>
+            <div className="tv-grid">
             {
                 tv_watchlist.map((list, i)=>(
                     <div key ={i}>
-                    <h3 >{list.tv.name}</h3>
-                    <img src ={list.tv.poster_path} alt="poster"/>
-                    <hr/>
+                    <div class="card-container">
+                        <img src ={list.tv.poster_path} alt="poster"></img>
+                        <div class="btn-rows">
+                            <button class="ctrl-btn"> Delete </button>
+                        </div>
+                    </div>
                     </div>
                 ))
             }
+            </div>
             
         </div>
     )
