@@ -19,10 +19,10 @@ export const Watchlist = () => {
 */
     return (
         <div>
-            <h1 style={{fontSize:"60px"}}>Watchlist Page</h1>
-            <h2>Movie Watchlist</h2>
+            {/*<h1 style={{fontSize:"60px"}}>Watchlist Page</h1>*/}
+            <h2 style={{backgroundColor:"#E8E8E8", padding:"10px"}}>Movie Watchlist</h2>
             {
-               watchlist.map((list, i)=>(
+                watchlist.map((list, i)=>(
                    <div key ={i}>
                    <h3 >{list.movie.title}</h3>
                    <img src ={list.movie.poster_path} alt="poster"/>
@@ -32,7 +32,7 @@ export const Watchlist = () => {
 
             }
              
-            <h2>TV Watchlist</h2>
+            <h2 style={{backgroundColor:"#E8E8E8", padding:"10px"}}>TV Watchlist</h2>
             {
                  tv_watchlist.map((list, i)=>(
                     <div key ={i}>
