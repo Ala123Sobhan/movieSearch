@@ -8,12 +8,12 @@ export const Watchlist = () => {
     console.log(watchlist)
 
     {watchlist.forEach((list)=>{
-       list_title.push(list.tv.name)
+       list_title.push(list.movie.title)
      })}
      //console.log(list_title)
     
      watchlist.forEach((list)=>{
-         console.log(list.tv.name)
+         console.log(list.movie.title)
      })
 
     return (
@@ -22,8 +22,8 @@ export const Watchlist = () => {
             {
                watchlist.map((list, i)=>(
                    <div key ={i}>
-                   <h3 >{list.tv.name}</h3>
-                   <img src ={list.tv.poster_path} alt="poster"/>
+                   <h3 >{list.movie.title}</h3>
+                   <img src ={list.movie.poster_path} alt="poster"/>
                    <hr/>
                    </div>
                 ))

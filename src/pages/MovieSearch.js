@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MovieRow from "./MovieRow"
+import MovieRows from "./MovieRows"
 import "../App.css"
 
 export class MovieSearch extends Component {
@@ -52,7 +53,8 @@ export class MovieSearch extends Component {
             {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
                 //const movieRow = this.getMovieRows(movie)
-                const movieRow = <MovieRow key={movie.id} movie={movie}/>
+               // const movieRow = <MovieRow key={movie.id} movie={movie}/>
+               const movieRow = <MovieRows key={movie.id} movie={movie}/>
                 console.log(movieRow)
                 movieRows.push(movieRow)
                 
