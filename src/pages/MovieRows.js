@@ -1,42 +1,44 @@
-import React, { Component } from 'react'
-import NewPageforRe from "./NewPageforRe"
-import RemovieRow from './RemovieRow'
+import React, {useContext } from 'react';
+import {GlobalContext} from '../context/GlobalState';
 
 var movieRows =[]
 var movie_Res =[]
 var title = []
-export class MovieRow extends Component {
-    constructor(props) {
-        super(props)
+
+function MovieRows(props) {
+
+    const {
+        addMovieToWatchlist, 
+        watchlist,
+      } = useContext(GlobalContext);
+
     
-        this.state = {
-            rows: [],
-            r_success: false
-        }
+
+    const check_Disability =(id)=>{
+     
+      
+        let storedMovie = watchlist.find((o) => o.movie.id === id);
+        let watchlistDisabled = storedMovie ? true : false
+        //console.log(watchlistDisabled)
+         return watchlistDisabled
+  
     }
-    
-    viewMovie=()=>{
-        console.log("in view movie--"+this.props.movie.title)
-        const url = "https://www.themoviedb.org/movie/"+this.props.movie.id
-        //window.location.href = url
+
+    const viewMovie=()=>{
+        console.log("in view movie--"+props.movie.title)
+        const url = "https://www.themoviedb.org/movie/"+props.movie.id
         window.open(url, "_blank");
     }
     
-    viewReMovie=(id)=>{
-    console.log("movie id --"+id)
-    const url = "https://www.themoviedb.org/movie/"+id
-      //window.location.href = url
-     // window.open( url, "_blank");
+    
 
-    }
-
-    movieInfo_newWindow=()=>{
+  const  movieInfo_newWindow=()=>{
 
             movieRows.forEach((movie)=>{
             let imgSrc = movie.poster_path
         
-            //let button = <button onClick={this.viewReMovie}>view</button>
-            console.log(movie.poster_path)
+          
+          //  console.log(movie.poster_path)
 
             const info = 
             "<table>"+
@@ -59,16 +61,8 @@ export class MovieRow extends Component {
         })
     }
 
-    opennewWindow=()=>{
-        // var popwindow = window.open("","Recommended Movies", "_blank");
-        /* popwindow.postMessage({"movieRows":this.state.rows}, 
-        'http://localhost:3001/recommendation');*/
-        
-          // console.log("MOVIE ROWS---"+movieRows)
-         //  const windowInfo = movieRows.length
-        // var movie_c = movie_Res[0]
-        // const res_m =[]
-        // this.movieInfo_newWindow()
+  const  opennewWindow=()=>{
+    
         var popwindow = window.open("", "_blank"); 
         popwindow.document.write("<h1>Recommendation Page</h1>");
         movieRows.forEach((movie)=>{
@@ -93,19 +87,17 @@ export class MovieRow extends Component {
         "<hr>"
         popwindow.document.write(info);
 
-        //title.push(info)
+      
         })
         
-        //   var popwindow = window.open("", "_blank"); 
-        //popwindow.document.write("<h1>Recommendation Page</h1>"+title);
-
+       
         title =[]
 
     }
-    getRecommendation =async()=>{
+   const getRecommendation =async()=>{
         try{
         
-        const movie_id = this.props.movie.id
+        const movie_id = props.movie.id
         let url =`https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=5958134e04ed9ecbbf6100cd3a582d3d`
 
         let response = await fetch(url)
@@ -122,17 +114,13 @@ export class MovieRow extends Component {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
                 movie.title = movie.title
                 movie.overview = movie.overview
-               // const movieRow = <RemovieRow key ={movie.id} movie={movie}/>
-              //  console.log(movie)
+             
                 movieRows.push(movie)
                 
             })
-            this.state.r_success = true
-            this.setState({
-                rows:movieRows
-            })
+          
             
-        this.opennewWindow()
+        opennewWindow()
             movieRows= []
 
         }
@@ -140,28 +128,29 @@ export class MovieRow extends Component {
             console.log(error)
         }
     }
-    
-    render() {
-        return (
-            <div>
-            <table key ={this.props.movie.id}>
+    return (
+        <div>
+             <table key ={props.movie.id}>
             <tbody>
                 <tr>
                     <td>
-                        <img alt ="poster" src ={this.props.movie.poster_path}/>
+                        <img alt ="poster" src ={props.movie.poster_path}/>
                     </td>
                     <td>
-                        <h3> {this.props.movie.title} </h3>
-                        <p>{this.props.movie.overview}</p>
-                        <button className="btn" onClick={this.viewMovie} value="View"> View </button>
-                        <button className="btn" onClick={this.getRecommendation} value="View"> Get Recommendation </button>
+                        <h3> {props.movie.title} </h3>
+                        <p>{props.movie.overview}</p>
+                        <button className="btn" onClick={viewMovie} value="View"> View </button>
+                        <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
+                         <button className="btn"
+                          disabled={check_Disability(props.movie.id)}
+                         onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
+                        
                     </td>
                 </tr>
             </tbody>
             </table>
-            </div>
-        )
-    }
+        </div>
+    )
 }
 
-export default MovieRow
+export default MovieRows

@@ -10,7 +10,7 @@ import Home from './Home'
 
 function PageInfo() {
     return (
-        <div class="">
+        <div >
           <Switch>
             <Route path="/tvsearch"> < Tvsearch/> </Route>
             <Route path="/topratedmovies"> <Topratedmovies /> </Route>

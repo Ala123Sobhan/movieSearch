@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TvRow from "./TvRow"
+import TvRows from "./TvRows"
 import "../App.css"
 export class Tvsearch extends Component {
     constructor(props) {
@@ -33,7 +34,8 @@ export class Tvsearch extends Component {
                 tv.poster_path = "https://image.tmdb.org/t/p/w185"+ tv.poster_path
                 //const movieRow = this.getMovieRows(movie)
                 
-                const movieRow = <TvRow key={tv.id} tv={tv}/>
+               // const movieRow = <TvRow key={tv.id} tv={tv}/>
+                const movieRow = <TvRows key={tv.id} tv={tv}/>
                 //console.log(movieRow)
                 movieRows.push(movieRow)
                 
