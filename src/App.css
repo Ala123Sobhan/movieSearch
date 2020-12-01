@@ -308,7 +308,19 @@ header .nav-links li:last-child {
 
 @media (min-width: 992px) {
   .movie-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.tv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .tv-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -359,7 +371,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn {
-  color: #fefefe;
+  color: black;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -369,7 +381,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: red;
   cursor: pointer;
 }
 
@@ -377,4 +389,31 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+/***************/
+/* Popular Movie Page */
+/***************/
+
+.watchlist-container{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+}
+
+.card-container{
+  width: 96%;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card-container:hover{
+  background-color: rgba(0,0,0,.4);
+}
+
+.btn-rows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

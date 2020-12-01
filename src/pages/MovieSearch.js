@@ -69,8 +69,8 @@ export class MovieSearch extends Component {
 
     render() {
         return (
-            <div class="movieSearch-container">
-                <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}> Movie Search</h1>
+            <div className="movieSearch-container">
+                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Movie Search</h1>
                 <input className ="input" style={{
                     fontSize: 24,
                     display: "block",
