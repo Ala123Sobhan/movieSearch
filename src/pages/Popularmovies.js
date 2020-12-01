@@ -37,20 +37,18 @@ export class Popularmovies extends Component {
             this.setState({
                 rows:movieRows
             })
-
-           
-           
+        
         }catch(error){
             console.log(error)
         }
     }
-   
+
     render() {
         
         return (
-            <div>
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Poplular Movies</h1>
-                 {this.state.rows}
+            <div class="popular-container">
+                <h1 style={{fontFamily:"Montserrat", fontWeight:"bold", paddingLeft:"2rem"}}>Poplular Movies</h1>
+                {this.state.rows}
             
             </div>
         )

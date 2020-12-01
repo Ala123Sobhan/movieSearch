@@ -59,7 +59,8 @@ const opennewWindow=()=>{
   
        
        var popwindow = window.open("", "_blank"); 
-       popwindow.document.write( '<h1 className=recom-title>Recommendation Page</h1>')
+       popwindow.document.write( `<h1>Recommendation Based On "${props.tv.name}"</h1>`)
+
        movieRows.forEach((tv)=>{
        
        
@@ -141,12 +142,12 @@ const opennewWindow=()=>{
     return (
         <div>
             <table key ={props.tv.id}>
-             <tbody>
-                 <tr>
-                     <td>
-                         <img alt ="poster" src ={props.tv.poster_path}/>
-                     </td>
- 
+            <tbody>
+                <tr>
+                    <td>
+                        <img alt ="poster" src ={props.tv.poster_path}/>
+                    </td>
+
                     <td>
                         <h3> {props.tv.name} </h3>
                         <p>{props.tv.overview}</p>
@@ -154,8 +155,8 @@ const opennewWindow=()=>{
                         <button className="btn" onClick={viewTv} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
                         <button className="btn"
-                          disabled={check_Disability(props.tv.id)}
-                         onClick={()=>addTvToWatchlist(props)}> Add To Watchlist </button>
+                            disabled={check_Disability(props.tv.id)}
+                            onClick={()=>addTvToWatchlist(props)}> Add To Watchlist </button>
                     </td>
                 </tr>
             </tbody>

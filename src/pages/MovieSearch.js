@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MovieRow from "./MovieRow"
 import MovieRows from "./MovieRows"
 import "../App.css"
 
@@ -77,9 +76,7 @@ export class MovieSearch extends Component {
                     width: "95%",
                     paddingTop: 8,
                     paddingBottom: 8,
-                    paddingLeft: 20,
                     paddingRight: 20,
-                    marginLeft: 10,
                     marginRight: 10
                 }}
                 onChange={this.handleChange}
