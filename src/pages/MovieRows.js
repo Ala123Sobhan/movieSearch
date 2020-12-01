@@ -63,7 +63,7 @@ function MovieRows(props) {
   const  opennewWindow=()=>{
     
         var popwindow = window.open("", "_blank"); 
-        popwindow.document.write("<h1>Recommendation Page</h1>");
+        popwindow.document.write( `<h1 className=recom-title>Recommendation Based On "${props.movie.title}"</h1>`)
         movieRows.forEach((movie)=>{
         let imgSrc = movie.poster_path
         

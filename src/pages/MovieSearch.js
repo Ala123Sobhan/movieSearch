@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MovieRow from "./MovieRow"
 import MovieRows from "./MovieRows"
 import "../App.css"
 
