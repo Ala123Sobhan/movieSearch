@@ -10,13 +10,12 @@ function MovieRows(props) {
     const {
         addMovieToWatchlist, 
         watchlist,
-      } = useContext(GlobalContext);
+        } = useContext(GlobalContext);
 
     
 
     const check_Disability =(id)=>{
-     
-      
+
         let storedMovie = watchlist.find((o) => o.movie.id === id);
         let watchlistDisabled = storedMovie ? true : false
         //console.log(watchlistDisabled)
@@ -130,7 +129,7 @@ function MovieRows(props) {
     }
     return (
         <div>
-             <table key ={props.movie.id}>
+            <table key ={props.movie.id}>
             <tbody>
                 <tr>
                     <td>
@@ -141,9 +140,9 @@ function MovieRows(props) {
                         <p>{props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
-                         <button className="btn"
-                          disabled={check_Disability(props.movie.id)}
-                         onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
+                        <button className="btn"
+                        disabled={check_Disability(props.movie.id)}
+                        onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
                         
                     </td>
                 </tr>

@@ -1,19 +1,16 @@
 import React, { useContext } from "react";
-import { MovieCard } from "../components/MovieCard";
 import { GlobalContext } from "../context/GlobalState";
 
 //var list_title =[]
 export const Watchlist = () => {
-const {watchlist,tv_watchlist} = useContext(GlobalContext);
+const {watchlist,tv_watchlist, removeMovieFromWatchList} = useContext(GlobalContext);
 
     //console.log(watchlist)
    // console.log("tv-"+tv_watchlist)
-
     /* {tv_watchlist.forEach((list)=>{
         list_title.push(list.tv.name)
     })}
     console.log(list_title)
-    
     tv_watchlist.forEach((list)=>{
     console.log(list.tv.name)
     })
@@ -29,7 +26,8 @@ const {watchlist,tv_watchlist} = useContext(GlobalContext);
                         <div class="card-container">
                             <img src ={list.movie.poster_path} alt="poster"/>
                             <div class="btn-rows">
-                                <button class="ctrl-btn"> Delete </button>
+                                <button class="ctrl-btn"
+                                onClick={()=> removeMovieFromWatchList(list.movie.id)}> Delete </button>
                             </div>
                         </div>
                     </div>
@@ -45,7 +43,7 @@ const {watchlist,tv_watchlist} = useContext(GlobalContext);
                     <div class="card-container">
                         <img src ={list.tv.poster_path} alt="poster"></img>
                         <div class="btn-rows">
-                            <button class="ctrl-btn"> Delete </button>
+                            <button class="ctrl-btn" > Delete </button>
                         </div>
                     </div>
                     </div>

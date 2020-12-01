@@ -10,6 +10,13 @@ export default (state, action) => {
             ...state,
             tv_watchlist:[action.payload, ...state.tv_watchlist],
         }
+        case "REMOVE_MOVIE_FROM_WATCHLIST":
+            return {
+        ...state,
+        watchlist: state.watchlist.splice(
+            (movie) => movie.id !== action.payload
+            ),
+        };
 
         default:
             return state;
