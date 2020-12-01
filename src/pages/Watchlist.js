@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
-<<<<<<< HEAD
-=======
 //import { MovieCard } from "../components/MovieCard";
->>>>>>> d39efce1d36087c7caf71ad1e7823a149982dfcb
 import { GlobalContext } from "../context/GlobalState";
 
 //var list_title =[]
