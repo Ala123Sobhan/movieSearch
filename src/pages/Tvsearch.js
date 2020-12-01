@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TvRow from "./TvRow"
 import TvRows from "./TvRows"
 import "../App.css"
 export class Tvsearch extends Component {

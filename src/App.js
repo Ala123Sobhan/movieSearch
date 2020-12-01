@@ -3,11 +3,11 @@ import './lib/font-awesome/css/all.min.css';
 import {Layout, Header, Navigation, Content, Drawer} from "react-mdl"
 import {Link} from "react-router-dom"
 import PageInfo from "./pages/PageInfo";
-//import {GlobalProvider} from './context/GlobalState'
+
 
 function App() {
   return (
-   // <GlobalProvider>
+  
     <div>
       <Layout>
       
@@ -21,7 +21,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
-                {/* <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watched">Watched</Link> */}
+
             </Navigation>
         </Header>
         <Drawer>
@@ -31,7 +31,7 @@ function App() {
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/popularmovies">Popular Movies</Link>
                 <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold"}} className ="link" to="/watchlist">Watchlist</Link>
-                {/* <Link style={{fontStyle:"italic", fontFamily:"Sofia", fontWeight:"bold"}} className ="link" to="/watched">Watched</Link> */}
+              
         </Drawer>
   
         <Content>
@@ -39,8 +39,7 @@ function App() {
         </Content>
     </Layout>
     </div>
-   // </GlobalProvider>
-
+  
   );
 }
 
