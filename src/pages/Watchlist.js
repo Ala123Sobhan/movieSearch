@@ -21,9 +21,9 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
         <div className="watchlist-container">
             <h1 style={{fontSize:"60px"}}>Watchlist Page</h1>
             <h2>Movie Watchlist</h2>
+            {watchlist.length > 0 ? (
             <div className="movie-grid">
-            {
-                watchlist.map((list, i)=>(
+            {  watchlist.map((list, i)=>(
                     <div key ={i}>
                         <div className="card-container">
                             <img src ={list.movie.poster_path} alt="poster"/>
@@ -35,12 +35,17 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
                     </div>
                 ))
             }
-            </div>
+            </div>):(
+                <h4>No movies in your watchlist yet. Add some!</h4>
+            )
+        }
             
             <h2>TV Watchlist</h2>
+
+            {tv_watchlist.length > 0 ? (
             <div className="tv-grid">
             {
-                tv_watchlist.map((list, i)=>(
+                 tv_watchlist.map((list, i)=>(
                     <div key ={i}>
                     <div className="card-container">
                         <img src ={list.tv.poster_path} alt="poster"></img>
@@ -52,7 +57,10 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
                     </div>
                 ))
             }
-            </div>
+            </div>):(
+                <h4>No tv shows in your watchlist yet. Add some!</h4>
+            )
+          }
             
         </div>
     )
