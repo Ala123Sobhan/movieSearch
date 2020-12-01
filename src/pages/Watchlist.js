@@ -16,11 +16,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList} = useContext(GlobalCont
     console.log(list.tv.name)
     })
 */
-    const handleDelete =(id)=>{
-      
-
-       removeMovieFromWatchList(id)
-    }
+   
     return (
         <div className="watchlist-container">
             <h1 style={{fontSize:"60px"}}>Watchlist Page</h1>
@@ -33,7 +29,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList} = useContext(GlobalCont
                             <img src ={list.movie.poster_path} alt="poster"/>
                             <div className="btn-rows">
                                 <button className="ctrl-btn"
-                                onClick={() => handleDelete(list.movie.id)}> Delete </button>
+                                onClick={() =>   removeMovieFromWatchList(list.movie.id)}> Delete </button>
                             </div>
                         </div>
                     </div>
