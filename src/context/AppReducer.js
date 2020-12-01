@@ -17,6 +17,13 @@ export default (state, action) => {
               ),
             };
 
+        case "REMOVE_MOVIE_FROM_TV_WATCHLIST":
+            return {
+                ...state,
+                tv_watchlist: state.tv_watchlist.filter((list) => list.tv.id !== action.payload
+                ),
+              };
+
         default:
             return state;
     }

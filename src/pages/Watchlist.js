@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 //var list_title =[]
 export const Watchlist = () => {
-const {watchlist,tv_watchlist, removeMovieFromWatchList} = useContext(GlobalContext);
+const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} = useContext(GlobalContext);
 
     //console.log(watchlist)
    // console.log("tv-"+tv_watchlist)
@@ -45,7 +45,8 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList} = useContext(GlobalCont
                     <div className="card-container">
                         <img src ={list.tv.poster_path} alt="poster"></img>
                         <div className="btn-rows">
-                            <button className="ctrl-btn" > Delete </button>
+                            <button className="ctrl-btn"
+                             onClick={() =>removeTvFromWatchList(list.tv.id)} > Delete </button>
                         </div>
                     </div>
                     </div>
