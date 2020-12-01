@@ -54,7 +54,7 @@ export class MovieSearch extends Component {
                 //const movieRow = this.getMovieRows(movie)
                // const movieRow = <MovieRow key={movie.id} movie={movie}/>
                const movieRow = <MovieRows key={movie.id} movie={movie}/>
-                console.log(movieRow)
+               // console.log(movieRow)
                 movieRows.push(movieRow)
                 
             })

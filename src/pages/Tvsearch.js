@@ -50,7 +50,7 @@ export class Tvsearch extends Component {
 
     render() {
         return (
-            <div class="tvSearch-container">
+            <div className="tvSearch-container">
                 <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}> TV Search </h1>
                 <div>
                 <input className="input"style={{

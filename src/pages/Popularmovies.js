@@ -46,7 +46,7 @@ export class Popularmovies extends Component {
     render() {
         
         return (
-            <div class="popular-container">
+            <div className="popular-container">
                 <h1 style={{fontFamily:"Montserrat", fontWeight:"bold", paddingLeft:"2rem"}}>Poplular Movies</h1>
                 {this.state.rows}
             

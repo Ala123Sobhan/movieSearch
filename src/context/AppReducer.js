@@ -12,11 +12,10 @@ export default (state, action) => {
         }
         case "REMOVE_MOVIE_FROM_WATCHLIST":
             return {
-        ...state,
-        watchlist: state.watchlist.splice(
-            (movie) => movie.id !== action.payload
-            ),
-        };
+              ...state,
+              watchlist: state.watchlist.filter((list) => list.movie.id !== action.payload
+              ),
+            };
 
         default:
             return state;

@@ -68,7 +68,7 @@ function MovieRows(props) {
         let imgSrc = movie.poster_path
         
         //let button = <button onClick={this.viewReMovie}>view</button>
-        console.log(movie.poster_path)
+        //console.log(movie.poster_path)
         const info = 
         "<table>"+
         "<tbody>"+

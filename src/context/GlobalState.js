@@ -30,7 +30,10 @@ export const GlobalProvider = props => {
     };
 
     const removeMovieFromWatchList = (id) => {
-        dispatch({type: "REMOVE_MOVIE_FROM_WATCHLIST", payload: id});
+        
+    
+        dispatch({type: "REMOVE_MOVIE_FROM_WATCHLIST", payload:id});
+        
     }
 
 
