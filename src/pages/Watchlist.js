@@ -19,7 +19,6 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
    
     return (
         <div className="watchlist-container">
-            <h1 style={{fontSize:"60px"}}>Watchlist Page</h1>
             <h2>Movie Watchlist</h2>
             {watchlist.length > 0 ? (
             <div className="movie-grid">
