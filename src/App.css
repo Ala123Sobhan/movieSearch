@@ -6,10 +6,10 @@
   text-align: center;
 }
 .top-barColor{
-  background: #CB11F2;
-  background: -webkit-linear-gradient(top left, #CB11F2, #31064B);
-  background: -moz-linear-gradient(top left, #CB11F2, #31064B);
-  background: linear-gradient(to bottom right, #CB11F2, #31064B);
+  background: rgb(71, 0, 0);
+  background: -webkit-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
+  background: -moz-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
+  background: linear-gradient(to bottom right, rgb(71, 0, 0), rgb(170, 0, 0));
 
 }
 
@@ -40,7 +40,7 @@
 }
 
 .App-header {
-  background-color: #CB11F2;
+  background-color: rgb(112,0,0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,27 +68,40 @@
 
 .info-container{
   padding: 5rem;
+  background-image: url("https://cdn.wallpapersafari.com/10/0/8hOjBJ.jpg");
+  position: fixed;
+  min-height: 100%;
+  background-size: cover;
 }
 
 .pageInfo-desc{
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  color: #fff;
 }
 
 .pageInfo-title{
+  opacity: 1;
+  color: #fff;
   padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2.4rem;
 }
 
 .pageInfo-text{
-  padding: 5rem;
+  opacity: 1;
+  color: #fff;
+  padding-left: 20rem;
+  padding-right: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   line-height: 2rem;
+  text-align: justify;
 }
 
 /***************/
@@ -118,7 +131,7 @@
 
 .btn {
   padding: 10px 15px;
-  background-color: #CB11F2;
+  background-color: rgb(104, 101, 101);
   color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
@@ -148,7 +161,7 @@
 }
 
 .btn:hover {
-  background-color: #ec16e2;
+  background-color: rgb(39, 37, 37);
   opacity: 1;
   cursor: pointer;
 }
