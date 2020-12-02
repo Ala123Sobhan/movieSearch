@@ -1,5 +1,4 @@
 import './App.css';
-import './lib/font-awesome/css/all.min.css';
 import {Layout, Header, Navigation, Content, Drawer} from "react-mdl"
 import {Link} from "react-router-dom"
 import PageInfo from "./pages/PageInfo";
