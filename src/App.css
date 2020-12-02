@@ -1,19 +1,17 @@
-/* Font awesome link */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
 
 .App {
   text-align: center;
 }
-.top-barColor{
+.top-barColor {
   background: rgb(71, 0, 0);
   background: -webkit-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
   background: -moz-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
   background: linear-gradient(to bottom right, rgb(71, 0, 0), rgb(170, 0, 0));
-
 }
 
-.input{
+.input {
   width: 100%;
   padding: 16px 20px;
   border: none;
@@ -23,7 +21,7 @@
   margin-right: 10;
 }
 
-.recom-title{
+.recom-title {
   background-color: black;
   color: "white";
   display: block;
@@ -40,7 +38,7 @@
 }
 
 .App-header {
-  background-color: rgb(112,0,0);
+  background-color: rgb(112, 0, 0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -66,7 +64,7 @@
 /* About Page */
 /***************/
 
-.info-container{
+.info-container {
   padding: 5rem;
   background-image: url("https://cdn.wallpapersafari.com/10/0/8hOjBJ.jpg");
   position: fixed;
@@ -74,24 +72,26 @@
   background-size: cover;
 }
 
-.pageInfo-desc{
+.pageInfo-desc {
   justify-content: center;
   align-items: center;
   opacity: 1;
   color: #fff;
 }
 
-.pageInfo-title{
+.pageInfo-title {
   opacity: 1;
   color: #fff;
+  padding-left: 8rem;
   padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
-.pageInfo-text{
+.pageInfo-text {
+  margin-left: 8rem;
   opacity: 1;
   color: #fff;
   padding-left: 20rem;
@@ -108,7 +108,7 @@
 /* Movie Search Page */
 /***************/
 
-.movieSearch-container{
+.movieSearch-container {
   padding: 2rem;
 }
 
@@ -116,7 +116,7 @@
 /* Movie Displays */
 /***************/
 
-.movie-display{
+.movie-display {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -125,7 +125,7 @@
 /* TV Search Page */
 /***************/
 
-.tvSearch-container{
+.tvSearch-container {
   padding: 2rem;
 }
 
@@ -148,7 +148,7 @@
 /* Top Rated Page */
 /***************/
 
-.topRated-container{
+.topRated-container {
   padding: 2rem;
 }
 
@@ -156,7 +156,7 @@
 /* Popular Movie Page */
 /***************/
 
-.popular-container{
+.popular-container {
   padding: 2rem;
 }
 
@@ -409,24 +409,25 @@ header .nav-links li:last-child {
 /* Popular Movie Page */
 /***************/
 
-.watchlist-container{
+.watchlist-container {
+  padding: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
   padding-bottom: 5rem;
 }
 
-.card-container{
-  width: 96%;
+.card-container {
+  width: 93%;
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.card-container:hover{
-  background-color: rgba(0,0,0,.4);
+.card-container:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.btn-rows{
+.btn-rows {
   display: flex;
   justify-content: center;
   align-items: center;

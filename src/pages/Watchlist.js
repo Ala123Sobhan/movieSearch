@@ -19,7 +19,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
    
     return (
         <div className="watchlist-container">
-            <h2>Movie Watchlist</h2>
+            <h1>Movie Watchlist</h1>
             {watchlist.length > 0 ? (
             <div className="movie-grid">
             {  watchlist.map((list, i)=>(
@@ -39,7 +39,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
             )
         }
             
-            <h2>TV Watchlist</h2>
+            <h1>TV Watchlist</h1>
 
             {tv_watchlist.length > 0 ? (
             <div className="tv-grid">
