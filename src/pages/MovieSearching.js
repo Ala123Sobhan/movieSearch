@@ -2,90 +2,76 @@ import React,{useState,useEffect} from 'react'
 import MovieRows from "./MovieRows"
 import "../App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import ReactDOM from "react-dom"
-import { Modal, Button } from "react-bootstrap"
+import { Modal, Button } from "react-bootstrap";
+import { FaMicrophone } from "react-icons/fa";
+import { FaSyncAlt } from "react-icons/fa";
+import { FaStopCircle } from "react-icons/fa";
+
 
 
 
 function MovieSearching() {
     const [rows, setRows] = useState([])
     const [inputVal, setInput] = useState('');
-
-    
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => 
+    {
+      setShow(false);
+    }
+    const handleShow = () =>{
+      setShow(true);
+    }
 
 
+  const {
+  transcript,
+  interimTranscript,
+  finalTranscript,
+  resetTranscript,
+  listening,
+  } = useSpeechRecognition();
 
- const {
-   transcript,
-   interimTranscript,
-   finalTranscript,
-   resetTranscript,
-   listening,
- } = useSpeechRecognition();
+  useEffect(() => {
+    if (finalTranscript !== '') {
+      console.log('Got Final Result: ', finalTranscript);
+    }
+  }, [interimTranscript, finalTranscript]);
 
- useEffect(() => {
-   if (finalTranscript !== '') {
-     console.log('Got final result:', finalTranscript);
-   }
- }, [interimTranscript, finalTranscript]);
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+      alert("Voice Recognition not compatible with the browser")
+      console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
+     //return null;
+  }
 
- if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-     alert("Voice Recognition not compatible with the browser")
-   //return null;
- }
-
- if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-    // alert("Voice Recognition not compatible with the browser")
-   console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
- }
- const listenContinuously = () => {
-
-   SpeechRecognition.startListening({
-     continuous: true,
-     language: 'en-GB',
-     language: 'hindi',
-
-   });
-
+  const listenContinuously = () => {
+    SpeechRecognition.startListening({
+    continuous: true,
+    language: 'en-GB',
+    });
     resetDone()
     handleShow()
+  };
 
- };
-
- const listeningDone = () =>{
-
-
+  const listeningDone = () =>{
     handleClose()
     SpeechRecognition.stopListening()
-
     setInput(transcript)
     renderMovieInfo(transcript)
- 
+    }
 
-
- }
   const resetDone =() =>{
-
     setInput('')
     resetTranscript()
-
   }
 
-   const onClick= ()=> {
-    this.dialog.showAlert({transcript})
+  const  handleChange=(event)=>{
+    setInput(event.target.value)
+    const searchTerm = event.target.value
+    renderMovieInfo(searchTerm)
   }
-   const  handleChange=(event)=>{
-        setInput(event.target.value)
-        const searchTerm = event.target.value
-        renderMovieInfo(searchTerm)
-    }
-   
 
-   const renderMovieInfo= async(searchTerm)=>{
+  const renderMovieInfo= async(searchTerm)=>{
         try{
         //for movies & tv
         let url = "https://api.themoviedb.org/3/search/multi?api_key=5958134e04ed9ecbbf6100cd3a582d3d&query="+searchTerm
@@ -100,24 +86,22 @@ function MovieSearching() {
             {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
                 //const movieRow = this.getMovieRows(movie)
-               // const movieRow = <MovieRow key={movie.id} movie={movie}/>
-               const movieRow = <MovieRows key={movie.id} movie={movie}/>
-               // console.log(movieRow)
+                // const movieRow = <MovieRow key={movie.id} movie={movie}/>
+                const movieRow = <MovieRows key={movie.id} movie={movie}/>
+                // console.log(movieRow)
                 movieRows.push(movieRow)
-                
             })
             setRows(movieRows)
-           
         }catch(error){
             console.log(error)
         }
     }
     return (
-             <div className="movieSearch-container">
+            <div className="search-container">
                     <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}>Movie Search</h1>
-                <div className="movieSearchBar-container">
+                <div className="searchBar-container">
                 <input className ="input" value={inputVal}
-                 style={{
+                style={{
                     fontSize: 24,
                     display: "block",
                     width: "75%",
@@ -128,9 +112,9 @@ function MovieSearching() {
                 }}
                 onChange={handleChange}
                 placeholder="Enter a movie...." />
-                <button className="voicebutton" type="button" onClick={resetDone}>Reset</button>
-                <button className="voicebutton" type="button" onClick={listenContinuously}>Listen</button>
-                <button className="voicebutton" type="button" onClick={listeningDone}>Stop</button>
+                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
+                <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>
+                <button className="voicebutton" type="button" onClick={listeningDone}> <FaStopCircle style={{color:"white"}} /> </button>
                 </div>
                 <div> {rows}</div>
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"

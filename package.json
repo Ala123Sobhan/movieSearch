@@ -11,6 +11,7 @@
     "react-bootstrap-dialog": "^0.13.0",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
     "react-mdl": "^2.1.0",
     "react-new-window": "^0.1.2",
     "react-responsive-modal": "^6.0.0",
