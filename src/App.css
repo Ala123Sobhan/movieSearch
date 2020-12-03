@@ -112,6 +112,15 @@
   padding: 2rem;
 }
 
+.movieSearchBar-container{
+  display: flex;
+}
+
+
+.modal-container{
+  margin-top: 50%;
+}
+
 /***************/
 /* Movie Displays */
 /***************/
