@@ -3,6 +3,7 @@ import MovieRows from "./MovieRows"
 import "../App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import ReactDOM from "react-dom"
+import { Modal, Button } from "react-bootstrap"
 
 
 
@@ -34,11 +35,11 @@ function MovieSearching() {
 
  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
      alert("Voice Recognition not compatible with the browser")
-   return null;
+   //return null;
  }
 
  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-     alert("Voice Recognition not compatible with the browser")
+    // alert("Voice Recognition not compatible with the browser")
    console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
  }
  const listenContinuously = () => {
@@ -57,12 +58,14 @@ function MovieSearching() {
 
  const listeningDone = () =>{
 
+
+    handleClose()
     SpeechRecognition.stopListening()
 
     setInput(transcript)
-    handleClose()
-
     renderMovieInfo(transcript)
+ 
+
 
  }
   const resetDone =() =>{
@@ -130,6 +133,29 @@ function MovieSearching() {
                  <button type="button" onClick={listeningDone}>Stop</button>
 
                  <div> {rows}</div>
+                 <div>
+                 <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+        centered
+       
+      >
+     
+        <Modal.Title>Listenining...</Modal.Title>
+        
+        <Modal.Body>
+        <span>{transcript}</span>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={listeningDone}>
+            Close
+          </Button>
+           
+        </Modal.Footer>
+      </Modal>
+                 </div>
                 
                  
                
