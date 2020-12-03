@@ -128,28 +128,28 @@ function MovieSearching() {
                 }}
                 onChange={handleChange}
                 placeholder="Enter a movie...." />
-                 <button className="voicebutton" type="button" onClick={resetDone}>Reset</button>
-                 <button className="voicebutton" type="button" onClick={listenContinuously}>Listen</button>
-                 <button className="voicebutton" type="button" onClick={listeningDone}>Stop</button>
+                <button className="voicebutton" type="button" onClick={resetDone}>Reset</button>
+                <button className="voicebutton" type="button" onClick={listenContinuously}>Listen</button>
+                <button className="voicebutton" type="button" onClick={listeningDone}>Stop</button>
                 </div>
-                 <div> {rows}</div>
-                 <Modal className="modal-container"
+                <div> {rows}</div>
+                <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"
         show={show}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
         centered
       >
-        <Modal.Title>Listenining...</Modal.Title>
-        
-        <Modal.Body>
-        <span>{transcript}</span>
+        <div>
+        <Modal.Title className="modalbody-textHolder">Listening...</Modal.Title>
+        <Modal.Body className="modal-body">
+        <span className="text-transcript">{transcript}</span>
         </Modal.Body>
+        </div>
         <Modal.Footer>
-          <Button variant="secondary" onClick={listeningDone}>
+          <Button style={{float:"right"}} variant="secondary" onClick={listeningDone}>
             Close
           </Button>
-           
         </Modal.Footer>
       </Modal>
         </div>

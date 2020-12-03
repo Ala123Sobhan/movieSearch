@@ -117,11 +117,31 @@
 }
 
 .modal-container{
-  padding-top: 5%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .voicebutton{
   margin: .5rem;
+}
+
+.modalbody-textHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body{
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
 /***************/

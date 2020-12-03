@@ -9,9 +9,8 @@ function Speech() {
 
     return (
         <div>
-             <button onClick={SpeechRecognition.startListening}>Start</button>
-           
-             <p>{transcript}</p>
+            <button onClick={SpeechRecognition.startListening}>Start</button>
+            <p>{transcript}</p>
         </div>
     )
 }
