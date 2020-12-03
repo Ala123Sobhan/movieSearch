@@ -6,7 +6,7 @@ import Tvsearch from './Tvsearch'
 import Topratedmovies from './Topratedmovies'
 import Popularmovies from './Popularmovies'
 import Home from './Home'
-
+import MovieSearching from './MovieSearching'
 function PageInfo() {
     return (
         <div >
@@ -15,7 +15,8 @@ function PageInfo() {
             <Route path="/topratedmovies"> <Topratedmovies /> </Route>
             <Route path="/popularmovies"> < Popularmovies/> </Route>
             <Route path="/watchlist"> <Watchlist/> </Route>
-            <Route path="/moviesearch"> < MovieSearch/> </Route>
+            {/*<Route path="/moviesearch"> < MovieSearch/> </Route>*/}
+            <Route path="/moviesearch"> < MovieSearching/> </Route>
             <Route path="/"> < Home/> </Route>
           </Switch>
         </div>
