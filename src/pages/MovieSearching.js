@@ -115,7 +115,8 @@ function MovieSearching() {
     return (
              <div className="movieSearch-container">
                     <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}>Movie Search</h1>
-                    <input className ="input" value={inputVal}
+                <div className="movieSearchBar-container">
+                <input className ="input" value={inputVal}
                  style={{
                     fontSize: 24,
                     display: "block",
@@ -125,15 +126,14 @@ function MovieSearching() {
                     paddingRight: 20,
                     marginRight: 10
                 }}
-                
                 onChange={handleChange}
                 placeholder="Enter a movie...." />
-                 <button type="button" onClick={resetDone}>Reset</button>
-                 <button type="button" onClick={listenContinuously}>Listen</button>
-                 <button type="button" onClick={listeningDone}>Stop</button>
+                 <button className="voicebutton" type="button" onClick={resetDone}>Reset</button>
+                 <button className="voicebutton" type="button" onClick={listenContinuously}>Listen</button>
+                 <button className="voicebutton" type="button" onClick={listeningDone}>Stop</button>
+                </div>
                  <div> {rows}</div>
-                 <div className="modal-container">
-                 <Modal
+                 <Modal className="modal-container"
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -152,7 +152,6 @@ function MovieSearching() {
            
         </Modal.Footer>
       </Modal>
-              </div>
         </div>
     )
 }

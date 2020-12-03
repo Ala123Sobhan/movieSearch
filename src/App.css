@@ -116,9 +116,12 @@
   display: flex;
 }
 
-
 .modal-container{
-  margin-top: 50%;
+  padding-top: 5%;
+}
+
+.voicebutton{
+  margin: .5rem;
 }
 
 /***************/
