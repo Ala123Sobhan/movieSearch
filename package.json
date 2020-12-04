@@ -18,12 +18,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-speech-recognition": "^3.3.0",
-<<<<<<< HEAD
     "react-tooltip": "^4.2.11",
-=======
     "sweetalert2": "^10.11.1",
     "sweetalert2-react-content": "^3.2.2",
->>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
     "web-vitals": "^0.2.4"
   },
   "scripts": {
