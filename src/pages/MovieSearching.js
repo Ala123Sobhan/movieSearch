@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import MovieRows from "./MovieRows"
 import "../App.css"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { Modal, Button } from "react-bootstrap";
 import { FaMicrophone } from "react-icons/fa";
@@ -17,7 +19,9 @@ function MovieSearching() {
 
     const handleClose = () => 
     {
+    
       setShow(false);
+      //console.log("handle close ---"+show)
     }
     const handleShow = () =>{
       setShow(true);
@@ -38,19 +42,40 @@ function MovieSearching() {
     }
   }, [interimTranscript, finalTranscript]);
 
-  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-      alert("Voice Recognition not compatible with the browser")
-      console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
-     //return null;
-  }
+ 
 
   const listenContinuously = () => {
+    if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+      handleClose()
+      //alert("Voice Recognition not compatible with the browser")
+      const MySwal = withReactContent(Swal)
+      MySwal.fire({
+        title: 'Warning' ,
+        text: 'Voice Recognition is not compatible with the browser',
+        icon: 'warning',
+        width: '500px',
+        background:'#F0F0F0',
+        confirmButtonColor:'gray',
+        heightAuto: false,
+         showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+             },
+        hideClass: {
+           popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+      console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
+       return
+     //return null;
+  }
+    resetDone()
+    handleShow()
     SpeechRecognition.startListening({
     continuous: true,
     language: 'en-GB',
     });
-    resetDone()
-    handleShow()
+   // resetDone()
+    //handleShow()
   };
 
   const listeningDone = () =>{
@@ -112,30 +137,28 @@ function MovieSearching() {
                 }}
                 onChange={handleChange}
                 placeholder="Enter a movie...." />
-                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
+               
                 <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>
                 <button className="voicebutton" type="button" onClick={listeningDone}> <FaStopCircle style={{color:"white"}} /> </button>
+                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
                 </div>
                 <div> {rows}</div>
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-        centered
-      >
-        <div>
-        <Modal.Title className="modalbody-textHolder">Listening...</Modal.Title>
-        <Modal.Body className="modal-body">
-        <span className="text-transcript">{transcript}</span>
-        </Modal.Body>
-        </div>
-        <Modal.Footer>
-          <Button style={{float:"right"}} variant="secondary" onClick={listeningDone}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+                centered
+                 >
+
+                <div>
+                  <h6></h6>
+                <Modal.Title className="modalbody-textHolder">Listening...</Modal.Title>
+                <Modal.Body className="modal-body">
+                <span className="text-transcript">{transcript}</span>
+                </Modal.Body>
+                </div>
+               </Modal>
         </div>
     )
 }
