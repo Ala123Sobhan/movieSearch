@@ -136,23 +136,16 @@ function MovieSearching() {
                 }}
                 onChange={handleChange}
                 placeholder="Enter a movie...." />
-<<<<<<< HEAD
                 <Tooltip label="Reset" position="top" >
                 <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
                 </Tooltip>
                 <Tooltip label="Voice" position="top" >
-=======
-               
->>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
                 <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>
                 </Tooltip>
                 <Tooltip label="Stop" position="top" >
                 <button className="voicebutton" type="button" onClick={listeningDone}> <FaStopCircle style={{color:"white"}} /> </button>
-<<<<<<< HEAD
                 </Tooltip>
-=======
                 <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
->>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
                 </div>
                 <div> {rows}</div>
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"
