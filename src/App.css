@@ -469,7 +469,7 @@ header .nav-links li:last-child {
 }
 
 .card-container {
-  width: 93.5%;
+  width: 88.5%;
   display: grid;
   grid-template-columns: 1fr;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
