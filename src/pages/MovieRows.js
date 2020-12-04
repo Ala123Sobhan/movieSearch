@@ -133,7 +133,7 @@ function MovieRows(props) {
                         <img alt ="poster" src ={props.movie.poster_path}/>
                     </td>
                     <td>
-                        <h3> {props.movie.title} </h3>
+                        <h3 style={{marginLeft:"15px"}} > {props.movie.title} </h3>
                         <p style={{marginLeft:"15px"}} >{props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
