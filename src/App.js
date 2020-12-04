@@ -13,23 +13,23 @@ function App() {
       
         <Navigation>
               
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link"  to="/">Home</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link"  to="/moviesearch">Movie Search</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/tvsearch">TV Search</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/popularmovies">Popular Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/watchlist">Watchlist</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/">Home</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/moviesearch">Movie Search</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/tvsearch">TV Search</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/topratedmovies">Top Rated Movies</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/popularmovies">Popular Movies</Link>
+                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link" to="/watchlist">Watchlist</Link>
 
             </Navigation>
         </Header>
         <Drawer>
           <div className="side-Navbar">
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className="link"  to="/">Home</Link>
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className="link"  to="/moviesearch">Movie Search</Link>
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/tvsearch">TV Search</Link>
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/popularmovies">Popular Movies</Link>
-            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/watchlist">Watchlist</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/">Home</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/moviesearch">Movie Search</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/tvsearch">TV Search</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/topratedmovies">Top Rated Movies</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/popularmovies">Popular Movies</Link>
+            <Link style={{fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none",color:"white"}} className="navBar-link" to="/watchlist">Watchlist</Link>
           </div>
         </Drawer>
   

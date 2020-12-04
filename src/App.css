@@ -48,10 +48,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -105,11 +101,23 @@
 }
 
 .side-Navbar{
-  background: rgb(71, 0, 0);
   display: grid;
-  grid-template-rows: 85% 85% 85% 85% 85% 85%;
-  padding-left: 2rem;
-  padding-top: 3rem;
+  grid-template-rows: 20% 20% 20% 20% 20% 20%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.navBar-link{
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(112, 0, 0);
+}
+
+.navBar-link:hover{
+  background: rgb(170, 0, 0);
 }
 
 /***************/
