@@ -3,7 +3,6 @@ import {Layout, Header, Navigation, Content, Drawer} from "react-mdl"
 import {Link} from "react-router-dom"
 import PageInfo from "./pages/PageInfo";
 
-
 function App() {
   return (
   
@@ -24,13 +23,14 @@ function App() {
             </Navigation>
         </Header>
         <Drawer>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}}className="link"  to="/">Home</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className="link"  to="/moviesearch">Movie Search</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/tvsearch">TV Search</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/popularmovies">Popular Movies</Link>
-                <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px"}} className ="link" to="/watchlist">Watchlist</Link>
-              
+          <div className="side-Navbar">
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className="link"  to="/">Home</Link>
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className="link"  to="/moviesearch">Movie Search</Link>
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/tvsearch">TV Search</Link>
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/topratedmovies">Top Rated Movies</Link>
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/popularmovies">Popular Movies</Link>
+            <Link style={{fontStyle:"italic", fontFamily:"Montserrat", fontWeight:"bold", fontSize:"16px", textDecoration:"none"}} className ="link" to="/watchlist">Watchlist</Link>
+          </div>
         </Drawer>
   
         <Content>

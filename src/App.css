@@ -104,6 +104,14 @@
   text-align: justify;
 }
 
+.side-Navbar{
+  background: rgb(71, 0, 0);
+  display: grid;
+  grid-template-rows: 85% 85% 85% 85% 85% 85%;
+  padding-left: 2rem;
+  padding-top: 3rem;
+}
+
 /***************/
 /* Movie Search Page */
 /***************/

@@ -12,7 +12,7 @@ function PageInfo() {
     return (
         <div >
           <Switch>
-           {/* <Route path="/tvsearch"> < Tvsearch/> </Route>*/}
+          {/* <Route path="/tvsearch"> < Tvsearch/> </Route>*/}
             <Route path="/tvsearch"> < TvSearching/> </Route>
             <Route path="/topratedmovies"> <Topratedmovies /> </Route>
             <Route path="/popularmovies"> < Popularmovies/> </Route>

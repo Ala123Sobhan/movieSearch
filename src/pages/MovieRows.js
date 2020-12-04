@@ -11,9 +11,6 @@ function MovieRows(props) {
         addMovieToWatchlist, 
         watchlist,
         } = useContext(GlobalContext);
-
-    
-
     const check_Disability =(id)=>{
 
         let storedMovie = watchlist.find((o) => o.movie.id === id);
@@ -137,7 +134,7 @@ function MovieRows(props) {
                     </td>
                     <td>
                         <h3> {props.movie.title} </h3>
-                        <p>{props.movie.overview}</p>
+                        <p style={{marginLeft:"15px"}} >{props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
                         <button className="btn"
