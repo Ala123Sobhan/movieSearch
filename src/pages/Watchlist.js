@@ -28,7 +28,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
                             <img src ={list.movie.poster_path} alt="poster"/>
                             <div className="btn-rows">
                                 <button className="ctrl-btn"
-                                onClick={() =>   removeMovieFromWatchList(list.movie.id)}> Delete </button>
+                                onClick={() => removeMovieFromWatchList(list.movie.id)}> Delete </button>
                             </div>
                         </div>
                     </div>
@@ -44,13 +44,13 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
             {tv_watchlist.length > 0 ? (
             <div className="tv-grid">
             {
-                 tv_watchlist.map((list, i)=>(
+                tv_watchlist.map((list, i)=>(
                     <div key ={i}>
                     <div className="card-container">
                         <img src ={list.tv.poster_path} alt="poster"></img>
                         <div className="btn-rows">
                             <button className="ctrl-btn"
-                             onClick={() =>removeTvFromWatchList(list.tv.id)} > Delete </button>
+                            onClick={() =>removeTvFromWatchList(list.tv.id)} > Delete </button>
                         </div>
                     </div>
                     </div>
@@ -59,8 +59,7 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
             </div>):(
                 <h4>No tv shows in your watchlist yet. Add some!</h4>
             )
-          }
-            
+        }
         </div>
     )
 }

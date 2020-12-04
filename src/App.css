@@ -126,7 +126,7 @@
 .voicebutton{
   cursor: pointer;
   margin: .5rem;
-  padding: 1rem;
+  padding: .75rem;
   background-color: rgb(104, 101, 101);
 }
 
@@ -447,14 +447,13 @@ header .nav-links li:last-child {
 /***************/
 
 .watchlist-container {
-  padding: 2rem;
-  padding-left: 5rem;
+  padding-left: 2rem;
   padding-right: 5rem;
   padding-bottom: 5rem;
 }
 
 .card-container {
-  width: 93%;
+  width: 93.5%;
   display: grid;
   grid-template-columns: 1fr;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
