@@ -6,7 +6,12 @@ import { Modal, Button } from "react-bootstrap"
 import { FaMicrophone } from "react-icons/fa";
 import { FaSyncAlt } from "react-icons/fa";
 import { FaStopCircle } from "react-icons/fa";
+<<<<<<< HEAD
 import { Tooltip } from 'react-mdl';
+=======
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+>>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
 
 
 function TvSearching() {
@@ -36,22 +41,37 @@ function TvSearching() {
    }
  }, [interimTranscript, finalTranscript]);
 
- if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-     alert("Voice Recognition not compatible with the browser")
-     console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
-     //return null;
- }
 
  const listenContinuously = () => {
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    handleClose()
+    const MySwal = withReactContent(Swal)
+    MySwal.fire({
+      title: 'Warning' ,
+      text: 'Voice Recognition is not compatible with the browser',
+      icon: 'warning',
+      width: '500px',
+      background:'#F0F0F0',
+      confirmButtonColor:'gray',
+      heightAuto: false,
+       showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+           },
+      hideClass: {
+         popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+   // alert("Voice Recognition not compatible with the browser")
+    console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
+     return
+   //return null;
+}
 
    SpeechRecognition.startListening({
      continuous: true,
      language: 'en-GB',
-     
 
    });
-    
-    
     resetDone()
     handleShow()
 
@@ -62,7 +82,7 @@ function TvSearching() {
     handleClose()
     SpeechRecognition.stopListening()
 
-    setInput(transcript)
+   setInput(transcript)
     renderMovieInfo(transcript)
     
 
@@ -130,15 +150,23 @@ function TvSearching() {
                 }}
                 onChange={handleChange}
                 placeholder="Enter a TV show...." />
+<<<<<<< HEAD
                 <Tooltip label="Reset" position="top" >
                 <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
                 </Tooltip>
                 <Tooltip label="Voice" position="top" >
+=======
+               
+>>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
                 <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>
                 </Tooltip>
                 <Tooltip label="Stop" position="top" >
                 <button className="voicebutton" type="button" onClick={listeningDone}> <FaStopCircle style={{color:"white"}} /> </button>
+<<<<<<< HEAD
                 </Tooltip>
+=======
+                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
+>>>>>>> 51e22eeafaccb7a2e7bbecd46051ddb52dda2e3d
                 </div>
                 <div> {rows}</div>
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"
@@ -154,11 +182,6 @@ function TvSearching() {
         <span className="text-transcript">{transcript}</span>
         </Modal.Body>
         </div>
-        <Modal.Footer>
-            <Button style={{float:"right"}} variant="secondary" onClick={listeningDone}>
-            Close
-            </Button>
-        </Modal.Footer>
         </Modal>
         </div>
     )
