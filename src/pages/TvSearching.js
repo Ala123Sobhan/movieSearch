@@ -148,16 +148,18 @@ function TvSearching() {
                 onChange={handleChange}
                 placeholder="Enter a TV show...." />
 
-                <Tooltip label="Reset" position="top" >
-                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
-                </Tooltip>
                 <Tooltip label="Voice" position="top" >
                 <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>
                 </Tooltip>
+
                 <Tooltip label="Stop" position="top" >
                 <button className="voicebutton" type="button" onClick={listeningDone}> <FaStopCircle style={{color:"white"}} /> </button>
-
                 </Tooltip>
+
+                <Tooltip label="Reset" position="top" >
+                <button className="voicebutton" type="button" onClick={resetDone}> <FaSyncAlt style={{color:"white"}}/> </button>
+                </Tooltip>
+
                 </div>
                 <div> {rows}</div>
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"

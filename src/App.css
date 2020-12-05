@@ -17,9 +17,6 @@
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
-  margin-left: 10;
-  margin-right: 10;
-  margin-bottom: 15px;
 }
 
 .recom-title {
@@ -131,6 +128,7 @@
 
 .searchBar-container{
   display: flex;
+  margin-bottom: 20px;
 }
 
 .modal-container{
@@ -143,7 +141,7 @@
 .voicebutton{
   cursor: pointer;
   margin: .5rem;
-  padding: .75rem;
+  padding: .95rem;
   background-color: rgb(104, 101, 101);
 }
 
