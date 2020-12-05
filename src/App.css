@@ -76,23 +76,20 @@
 .pageInfo-title {
   opacity: 1;
   color: #fff;
-  padding-left: 8rem;
   padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 2.5rem;
 }
 
 .pageInfo-text {
-  margin-left: 8rem;
   opacity: 1;
   color: #fff;
   padding-left: 20rem;
   padding-right: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+text-align: center;
   font-size: 2rem;
   line-height: 2rem;
   text-align: justify;
@@ -457,9 +454,9 @@ header .nav-links li:last-child {
   text-align: center;
 }
 
-/***************/
-/* Popular Movie Page */
-/***************/
+/***************************************************************************/
+/*                        Popular Movie Page                               */
+/***************************************************************************/
 
 .watchlist-container {
   padding-left: 2rem;
@@ -468,10 +465,19 @@ header .nav-links li:last-child {
 }
 
 .card-container {
-  width: 93.5%;
-  display: grid;
-  grid-template-columns: 1fr;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    width: 100%
+  }
+}
+
+@media (min-width: 1330px) and (max-width: 1440px){
+  .card-container {
+    width: 93%;
+  }
 }
 
 .card-container:hover {
