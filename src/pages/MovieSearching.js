@@ -157,7 +157,7 @@ function MovieSearching() {
                 backdrop="static"
                 keyboard={false}
                 centered
-                 >
+                >
 
                 <div>
                   <h6></h6>
