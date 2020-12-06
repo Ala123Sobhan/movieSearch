@@ -143,10 +143,12 @@ text-align: center;
 }
 
 .modalbody-textHolder{
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
+  font-size: 23px;
 }
 
 .modal-body{
@@ -159,6 +161,11 @@ text-align: center;
   justify-content: center;
   align-items: center;
   opacity: 1;
+}
+
+.text-transcript{
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 /***************/

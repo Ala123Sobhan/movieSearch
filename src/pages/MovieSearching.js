@@ -160,7 +160,6 @@ function MovieSearching() {
                 >
 
                 <div>
-                  <h6></h6>
                 <Modal.Title className="modalbody-textHolder">Listening...</Modal.Title>
                 <Modal.Body className="modal-body">
                 <span className="text-transcript">{transcript}</span>
