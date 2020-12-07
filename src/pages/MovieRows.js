@@ -132,7 +132,7 @@ function MovieRows(props) {
                         {props.movie.poster_path ? (
                             <img alt ="poster" src ={props.movie.poster_path}/>
                         ) : (
-                            <div className="filler-poster "></div>
+                            <div className="filler-poster"></div>
                         )}
                     </td>
                     <td>
