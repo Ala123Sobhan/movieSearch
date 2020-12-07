@@ -137,14 +137,6 @@ text-align: center;
 
 .voicebutton {
   cursor: pointer;
-<<<<<<< HEAD
-  margin: 0.5rem;
-  padding: 0.75rem;
-  background-color: rgb(104, 101, 101);
-}
-
-.modalbody-textHolder {
-=======
   margin: .5rem;
   padding: .95rem;
   background-color: rgb(104, 101, 101);
@@ -152,7 +144,6 @@ text-align: center;
 
 .modalbody-textHolder{
   text-transform: uppercase;
->>>>>>> 56a7cb96fe33699f43e144ce07f50745170259e2
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,12 +472,6 @@ header .nav-links li:last-child {
 }
 
 .card-container {
-<<<<<<< HEAD
-  width: 88.5%;
-  display: grid;
-  grid-template-columns: 1fr;
-=======
->>>>>>> 56a7cb96fe33699f43e144ce07f50745170259e2
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
