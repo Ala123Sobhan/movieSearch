@@ -16,7 +16,6 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
     console.log(list.tv.name)
     })
 */
-   
     return (
         <div className="watchlist-container">
             <h1>Movie Watchlist</h1>
