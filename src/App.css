@@ -482,7 +482,19 @@ header .nav-links li:last-child {
 
 @media (min-width: 1330px) and (max-width: 1440px){
   .card-container {
+    width: 98%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1504px){
+  .card-container {
     width: 93%;
+  }
+}
+
+@media (min-width: 1540px) and (max-width: 1640px){
+  .card-container {
+    width: 85%;
   }
 }
 
