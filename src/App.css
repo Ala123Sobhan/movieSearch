@@ -100,7 +100,7 @@
   text-align: justify;
 }
 
-.side-Navbar{
+.side-Navbar {
   display: grid;
   grid-template-rows: 20% 20% 20% 20% 20% 20%;
   justify-content: center;
@@ -108,7 +108,7 @@
   color: #fff;
 }
 
-.navBar-link{
+.navBar-link {
   padding: 3rem;
   justify-content: center;
   align-items: center;
@@ -116,7 +116,7 @@
   background: rgb(112, 0, 0);
 }
 
-.navBar-link:hover{
+.navBar-link:hover {
   background: rgb(170, 0, 0);
 }
 
@@ -128,32 +128,32 @@
   padding: 2rem;
 }
 
-.searchBar-container{
+.searchBar-container {
   display: flex;
 }
 
-.modal-container{
+.modal-container {
   padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.voicebutton{
+.voicebutton {
   cursor: pointer;
-  margin: .5rem;
-  padding: .75rem;
+  margin: 0.5rem;
+  padding: 0.75rem;
   background-color: rgb(104, 101, 101);
 }
 
-.modalbody-textHolder{
+.modalbody-textHolder {
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
 }
 
-.modal-body{
+.modal-body {
   color: black;
   font-size: 1rem;
   display: flex;
