@@ -149,7 +149,7 @@ const opennewWindow=()=>{
                     </td>
                     <td>
                         <h3 style={{marginLeft:"15px"}} > {props.tv.name} </h3>
-                        <p style={{marginLeft:"15px"}} >{props.tv.overview}</p>
+                        <p style={{marginLeft:"15px", textAlign:"justify"}} >{props.tv.overview}</p>
                         <button className="btn" onClick={viewTv} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
                         <button className="btn"

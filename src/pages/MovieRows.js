@@ -137,7 +137,7 @@ function MovieRows(props) {
                     </td>
                     <td>
                         <h3 style={{marginLeft:"15px"}} > {props.movie.title} </h3>
-                        <p style={{marginLeft:"15px"}} > {props.movie.overview}</p>
+                        <p style={{marginLeft:"15px", textAlign:"justify"}} > {props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
                         <button className="btn"
