@@ -129,10 +129,11 @@ function MovieRows(props) {
             <tbody>
                 <tr>
                     <td>
-                        {props.movie.poster_path ? (
-                            <img alt ="poster" src ={props.movie.poster_path}/>
-                        ) : (
+                        {props.movie.poster_path === "https://image.tmdb.org/t/p/w185undefined" || 
+                        props.movie.poster_path === "https://image.tmdb.org/t/p/w185null" ? (
                             <div className="filler-poster"></div>
+                        ) : (
+                            <img alt ="poster" src ={props.movie.poster_path}/>
                         )}
                     </td>
                     <td>

@@ -145,7 +145,12 @@ const opennewWindow=()=>{
             <tbody>
                 <tr>
                     <td>
-                        <img alt ="poster" src ={props.tv.poster_path}/>
+                    {props.tv.poster_path === "https://image.tmdb.org/t/p/w185undefined" || 
+                        props.tv.poster_path === "https://image.tmdb.org/t/p/w185null" ? (
+                            <div className="filler-poster"></div>
+                        ) : (
+                            <img alt ="poster" src ={props.tv.poster_path}/>
+                        )}
                     </td>
                     <td>
                         <h3 style={{marginLeft:"15px"}} > {props.tv.name} </h3>
