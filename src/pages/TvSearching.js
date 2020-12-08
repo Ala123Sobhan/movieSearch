@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import TvRows from "./TvRows"
 import "../App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { Modal, Button } from "react-bootstrap"
+import { Modal} from "react-bootstrap"
 import { FaMicrophone } from "react-icons/fa";
 import { FaSyncAlt } from "react-icons/fa";
 import { FaStopCircle } from "react-icons/fa";
@@ -29,7 +29,6 @@ function TvSearching() {
    interimTranscript,
    finalTranscript,
    resetTranscript,
-   listening,
  } = useSpeechRecognition();
 
  useEffect(() => {
@@ -126,7 +125,7 @@ function TvSearching() {
          setRows(movieRows)
      
      }catch(error){
-         console.log(" here: "+error)
+         console.log(error)
      }
     }
 
