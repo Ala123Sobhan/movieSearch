@@ -487,7 +487,7 @@ header .nav-links li:last-child {
 
 @media (min-width: 1440px) and (max-width: 1504px){
   .card-container {
-    width: 93%;
+    width: 89.5% ;
   }
 }
 
