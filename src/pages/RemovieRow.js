@@ -12,7 +12,7 @@ export class RemovieRow extends Component {
                             </td>
                             <td>
                                 <h3> {this.props.movie.title} </h3>
-                                <p>{this.props.movie.overview}</p>
+                                <p style={{textAlign:"justify"}}>{this.props.movie.overview}</p>
                             </td>
                         </tr>
                     </tbody>
