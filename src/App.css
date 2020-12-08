@@ -66,6 +66,12 @@
   background-size: cover;
 }
 
+@media (min-width: 1540px) and (max-width: 1640px){
+  .info-container{
+    width: 100%;
+  }
+}
+
 .pageInfo-desc {
   justify-content: center;
   align-items: center;
@@ -485,7 +491,7 @@ header .nav-links li:last-child {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1504px){
+@media (min-width: 1450px) and (max-width: 1504px){
   .card-container {
     width: 93%;
   }
