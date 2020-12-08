@@ -66,9 +66,10 @@
   background-size: cover;
 }
 
-@media (min-width: 1540px) and (max-width: 1640px){
+@media (min-width: 1504px) and (max-width: 1640px){
   .info-container{
     width: 100%;
+    background-size:90%;
   }
 }
 
@@ -78,11 +79,17 @@
   opacity: 1;
   color: #fff;
 }
+@media (min-width: 1504px) and (max-width: 1640px){
+  .pageInfo-desc{
+    padding: 2rem;
+    padding-right: 13.5rem;
+  }
+}
 
 .pageInfo-title {
   opacity: 1;
   color: #fff;
-  padding-top: 10rem;
+  padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,7 +500,7 @@ header .nav-links li:last-child {
 
 @media (min-width: 1450px) and (max-width: 1504px){
   .card-container {
-    width: 89.5% ;
+    width: 88.5% ;
   }
 }
 
