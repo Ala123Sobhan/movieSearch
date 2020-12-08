@@ -1,21 +1,11 @@
 import React, { useContext } from "react";
-//import { MovieCard } from "../components/MovieCard";
 import { GlobalContext } from "../context/GlobalState";
 
-//var list_title =[]
+
 export const Watchlist = () => {
 const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} = useContext(GlobalContext);
 
-    //console.log(watchlist)
-   // console.log("tv-"+tv_watchlist)
-    /* {tv_watchlist.forEach((list)=>{
-        list_title.push(list.tv.name)
-    })}
-    console.log(list_title)
-    tv_watchlist.forEach((list)=>{
-    console.log(list.tv.name)
-    })
-*/
+   
     return (
         <div className="watchlist-container">
             <h1>Movie Watchlist</h1>
