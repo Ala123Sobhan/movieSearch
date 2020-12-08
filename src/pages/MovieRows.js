@@ -2,8 +2,8 @@ import React, {useContext } from 'react';
 import {GlobalContext} from '../context/GlobalState';
 
 var movieRows =[]
-var movie_Res =[]
-var title = []
+//var movie_Res =[]
+//var title = []
 
 function MovieRows(props) {
 
@@ -26,36 +26,6 @@ function MovieRows(props) {
         window.open(url, "_blank");
     }
     
-    
-
-  const  movieInfo_newWindow=()=>{
-
-            movieRows.forEach((movie)=>{
-            let imgSrc = movie.poster_path
-        
-          
-          //  console.log(movie.poster_path)
-
-            const info = 
-            "<table>"+
-            "<tbody>"+
-            "<tr>"+
-        
-            '<td><text><img src="' + imgSrc + '"></text></td>'+ 
-
-            "<td>"+ "<h2>"+movie.title+"</h2>" + 
-            "<p>"+movie.overview+"</p>"+
-            "</td>" +
-            
-
-            "</tr>"+
-            "</tbody>"+
-            "</table>"+
-            "<hr>"
-            
-            title.push(info)
-        })
-    }
 
   const  opennewWindow=()=>{
     
@@ -87,7 +57,7 @@ function MovieRows(props) {
         })
         
        
-        title =[]
+        //title =[]
 
     }
    const getRecommendation = async()=>{
@@ -101,15 +71,15 @@ function MovieRows(props) {
         const data = await response.json()
         //console.log(data)
         const results = data.results;
-        movie_Res = results
+        //movie_Res = results
        // console.log(results)
        // var movieRows =[]
             movieRows =[]
             results.forEach((movie) =>
             {
                 movie.poster_path = "https://image.tmdb.org/t/p/w185" + movie.poster_path
-                movie.title = movie.title
-                movie.overview = movie.overview
+                //movie.title = movie.title
+                //movie.overview = movie.overview
                 movieRows.push(movie)
             })
         opennewWindow()

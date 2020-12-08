@@ -4,7 +4,7 @@ import "../App.css"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { Modal, Button } from "react-bootstrap";
+import { Modal} from "react-bootstrap";
 import { FaMicrophone } from "react-icons/fa";
 import { FaSyncAlt } from "react-icons/fa";
 import { FaStopCircle } from "react-icons/fa";
@@ -32,7 +32,6 @@ function MovieSearching() {
   interimTranscript,
   finalTranscript,
   resetTranscript,
-  listening,
   } = useSpeechRecognition();
 
   useEffect(() => {

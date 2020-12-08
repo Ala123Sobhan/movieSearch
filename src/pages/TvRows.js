@@ -2,8 +2,7 @@ import React, {useContext } from 'react';
 import {GlobalContext} from '../context/GlobalState';
 
 var movieRows =[]
-var movie_Res =[]
-var title = []
+//var title = []
 function TvRows(props) {
 
     const {
@@ -30,30 +29,7 @@ function TvRows(props) {
         window.open( url, "_blank");
     }
 
-    const movieInfo_newWindow=()=>{
-        movieRows.forEach((tv)=>{
-        let imgSrc = tv.poster_path
-        const info = 
-        "<table>"+
-        "<tbody>"+
-        "<tr>"+
-        '<td><text><img src="' + imgSrc + '"></text></td>'+ 
-
-        "<td>"+ "<h2>"+tv.name+"</h2>" + 
-        "<p>"+tv.overview+"</p>"+
-        "</td>" +
-        
-
-         "</tr>"+
-         "</tbody>"+
-         "</table>"+
-          "<hr>"
-         
-        
-        title.push(info)
-     })
-
-}
+   
 
 const opennewWindow=()=>{
   
@@ -62,11 +38,7 @@ const opennewWindow=()=>{
        popwindow.document.write( `<h1>Recommendation Based On "${props.tv.name}"</h1>`)
 
        movieRows.forEach((tv)=>{
-       
-       
         let imgSrc = tv.poster_path
-       
-       
 
         const info = 
         "<table>"+
@@ -90,7 +62,7 @@ const opennewWindow=()=>{
      })
      //  popwindow.document.write('<h1 className=recom-title>Recommendation Page</h1>'+title);
 
-       title =[]
+      // title =[]
       
 
 }
@@ -98,7 +70,6 @@ const opennewWindow=()=>{
   const getRecommendation =async()=>{
        console.log("in get recom")
     try{
-    
     const tv_id = props.tv.id
     let url =`https://api.themoviedb.org/3/tv/${tv_id}/recommendations?api_key=5958134e04ed9ecbbf6100cd3a582d3d`
 
@@ -106,7 +77,7 @@ const opennewWindow=()=>{
     const data = await response.json()
     
     const results = data.results;
-    movie_Res = results
+    //movie_Res = results
     //console.log(results)
 
          
@@ -115,8 +86,8 @@ const opennewWindow=()=>{
         {
             
             tv.poster_path = "https://image.tmdb.org/t/p/w185"+ tv.poster_path
-            tv.name = tv.name
-            tv.overview = tv.overview
+           // tv.name = tv.name
+            //tv.overview = tv.overview
            // const movieRow = <RemovieRow key ={movie.id} movie={movie}/>
                
           //  console.log(movie)
