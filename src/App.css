@@ -1,29 +1,25 @@
-/* Font awesome link */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
 
 .App {
   text-align: center;
 }
-.top-barColor{
-  background: #CB11F2;
-  background: -webkit-linear-gradient(top left, #CB11F2, #31064B);
-  background: -moz-linear-gradient(top left, #CB11F2, #31064B);
-  background: linear-gradient(to bottom right, #CB11F2, #31064B);
-
+.top-barColor {
+  background: rgb(71, 0, 0);
+  background: -webkit-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
+  background: -moz-linear-gradient(top left, rgb(71, 0, 0), rgb(170, 0, 0));
+  background: linear-gradient(to bottom right, rgb(71, 0, 0), rgb(170, 0, 0));
 }
 
-.input{
+.input {
   width: 100%;
   padding: 16px 20px;
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
-  margin-left: 10;
-  margin-right: 10;
 }
 
-.recom-title{
+.recom-title {
   background-color: black;
   color: "white";
   display: block;
@@ -40,7 +36,7 @@
 }
 
 .App-header {
-  background-color: #CB11F2;
+  background-color: rgb(112, 0, 0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,10 +44,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -66,43 +58,121 @@
 /* About Page */
 /***************/
 
-.info-container{
+.info-container {
   padding: 5rem;
+  background-image: url("https://cdn.wallpapersafari.com/10/0/8hOjBJ.jpg");
+  position: fixed;
+  min-height: 100%;
+  background-size: cover;
 }
 
-.pageInfo-desc{
+.pageInfo-desc {
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  color: #fff;
 }
 
-.pageInfo-title{
+.pageInfo-title {
+  opacity: 1;
+  color: #fff;
+  padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
-.pageInfo-text{
-  padding: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pageInfo-text {
+  opacity: 1;
+  color: #fff;
+  padding-left: 20rem;
+  padding-right: 20rem;
+text-align: center;
   font-size: 2rem;
   line-height: 2rem;
+  text-align: justify;
+}
+
+.side-Navbar {
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20% 20%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.navBar-link {
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(112, 0, 0);
+}
+
+.navBar-link:hover {
+  background: rgb(170, 0, 0);
 }
 
 /***************/
 /* Movie Search Page */
 /***************/
 
-.movieSearch-container{
+.search-container {
   padding: 2rem;
+}
+
+.searchBar-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.modal-container {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voicebutton {
+  cursor: pointer;
+  margin: .5rem;
+  padding: .95rem;
+  background-color: rgb(104, 101, 101);
+}
+
+.modalbody-textHolder{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  font-size: 23px;
+}
+
+.modal-body {
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.text-transcript{
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 /***************/
 /* Movie Displays */
 /***************/
 
-.movie-display{
+.movie-display {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -111,13 +181,13 @@
 /* TV Search Page */
 /***************/
 
-.tvSearch-container{
+.tvSearch-container {
   padding: 2rem;
 }
 
 .btn {
   padding: 10px 15px;
-  background-color: #CB11F2;
+  background-color: rgb(104, 101, 101);
   color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
@@ -134,7 +204,7 @@
 /* Top Rated Page */
 /***************/
 
-.topRated-container{
+.topRated-container {
   padding: 2rem;
 }
 
@@ -142,12 +212,12 @@
 /* Popular Movie Page */
 /***************/
 
-.popular-container{
+.popular-container {
   padding: 2rem;
 }
 
 .btn:hover {
-  background-color: #ec16e2;
+  background-color: rgb(39, 37, 37);
   opacity: 1;
   cursor: pointer;
 }
@@ -391,28 +461,37 @@ header .nav-links li:last-child {
   text-align: center;
 }
 
-/***************/
-/* Popular Movie Page */
-/***************/
+/***************************************************************************/
+/*                        Popular Movie Page                               */
+/***************************************************************************/
 
-.watchlist-container{
-  padding-left: 5rem;
+.watchlist-container {
+  padding-left: 2rem;
   padding-right: 5rem;
   padding-bottom: 5rem;
 }
 
-.card-container{
-  width: 96%;
-  display: grid;
-  grid-template-columns: 1fr;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+.card-container {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.card-container:hover{
-  background-color: rgba(0,0,0,.4);
+@media (max-width: 992px) {
+  .card-container {
+    width: 100%
+  }
 }
 
-.btn-rows{
+@media (min-width: 1330px) and (max-width: 1440px){
+  .card-container {
+    width: 93%;
+  }
+}
+
+.card-container:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-rows {
   display: flex;
   justify-content: center;
   align-items: center;

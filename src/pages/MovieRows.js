@@ -10,13 +10,9 @@ function MovieRows(props) {
     const {
         addMovieToWatchlist, 
         watchlist,
-      } = useContext(GlobalContext);
-
-    
-
+        } = useContext(GlobalContext);
     const check_Disability =(id)=>{
-     
-      
+
         let storedMovie = watchlist.find((o) => o.movie.id === id);
         let watchlistDisabled = storedMovie ? true : false
         //console.log(watchlistDisabled)
@@ -69,7 +65,7 @@ function MovieRows(props) {
         let imgSrc = movie.poster_path
         
         //let button = <button onClick={this.viewReMovie}>view</button>
-        console.log(movie.poster_path)
+        //console.log(movie.poster_path)
         const info = 
         "<table>"+
         "<tbody>"+
@@ -94,7 +90,7 @@ function MovieRows(props) {
         title =[]
 
     }
-   const getRecommendation =async()=>{
+   const getRecommendation = async()=>{
         try{
         
         const movie_id = props.movie.id
@@ -111,15 +107,11 @@ function MovieRows(props) {
             movieRows =[]
             results.forEach((movie) =>
             {
-                movie.poster_path = "https://image.tmdb.org/t/p/w185"+ movie.poster_path
+                movie.poster_path = "https://image.tmdb.org/t/p/w185" + movie.poster_path
                 movie.title = movie.title
                 movie.overview = movie.overview
-             
                 movieRows.push(movie)
-                
             })
-          
-            
         opennewWindow()
             movieRows= []
 
@@ -128,22 +120,29 @@ function MovieRows(props) {
             console.log(error)
         }
     }
+
+    
+
     return (
         <div>
-             <table key ={props.movie.id}>
+            <table key ={props.movie.id}>
             <tbody>
                 <tr>
                     <td>
-                        <img alt ="poster" src ={props.movie.poster_path}/>
+                        {props.movie.poster_path ? (
+                            <img alt ="poster" src ={props.movie.poster_path}/>
+                        ) : (
+                            <div className="filler-poster "></div>
+                        )}
                     </td>
                     <td>
-                        <h3> {props.movie.title} </h3>
-                        <p>{props.movie.overview}</p>
+                        <h3 style={{marginLeft:"15px"}} > {props.movie.title} </h3>
+                        <p style={{marginLeft:"15px"}} > {props.movie.overview}</p>
                         <button className="btn" onClick={viewMovie} value="View"> View </button>
                         <button className="btn" onClick={getRecommendation} value="View"> Get Recommendation </button>
-                         <button className="btn"
-                          disabled={check_Disability(props.movie.id)}
-                         onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
+                        <button className="btn"
+                        disabled={check_Disability(props.movie.id)}
+                        onClick={()=>addMovieToWatchlist(props)}> Add To Watchlist </button>
                         
                     </td>
                 </tr>

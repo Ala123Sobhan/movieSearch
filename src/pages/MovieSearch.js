@@ -54,7 +54,7 @@ export class MovieSearch extends Component {
                 //const movieRow = this.getMovieRows(movie)
                // const movieRow = <MovieRow key={movie.id} movie={movie}/>
                const movieRow = <MovieRows key={movie.id} movie={movie}/>
-                console.log(movieRow)
+               // console.log(movieRow)
                 movieRows.push(movieRow)
                 
             })
@@ -69,7 +69,7 @@ export class MovieSearch extends Component {
     render() {
         return (
             <div className="movieSearch-container">
-                <h1 style={{paddingLeft:"10px",  fontFamily:"Montserrat"}}>Movie Search</h1>
+                <h1 style={{fontFamily:"Montserrat", fontWeight:"bold"}}>Movie Search</h1>
                 <input className ="input" style={{
                     fontSize: 24,
                     display: "block",
@@ -77,10 +77,11 @@ export class MovieSearch extends Component {
                     paddingTop: 8,
                     paddingBottom: 8,
                     paddingRight: 20,
-                    marginRight: 10
+                    marginRight: 10,
                 }}
                 onChange={this.handleChange}
                 placeholder="Enter a movie...." />
+               
                 {this.state.rows}
             </div>
         )
