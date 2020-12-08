@@ -139,14 +139,14 @@ function TvSearching() {
                 style={{
                     fontSize: 24,
                     display: "block",
-                    width: "75%",
+                    width: "85%",
                     paddingTop: 8,
                     paddingBottom: 8,
                     paddingRight: 20,
                     marginRight: 10
                 }}
                 onChange={handleChange}
-                placeholder="Enter a TV show...." />
+                placeholder="Enter a tv show...." />
 
                 <Tooltip label="Voice" position="top" >
                 <button className="voicebutton" type="button" onClick={listenContinuously}> <FaMicrophone style={{color:"white"}} /></button>

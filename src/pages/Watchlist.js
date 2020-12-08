@@ -24,7 +24,11 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
             {  watchlist.map((list, i)=>(
                     <div key ={i}>
                         <div className="card-container">
+                            {list.movie.poster_path === "https://image.tmdb.org/t/p/w185undefined" || 
+                        list.movie.poster_path === "https://image.tmdb.org/t/p/w185null" ? (
+                            <div className="filler-poster"></div>):(
                             <img src ={list.movie.poster_path} alt="poster"/>
+                            )}
                             <div className="btn-rows">
                                 <button className="ctrl-btn"
                                 onClick={() => removeMovieFromWatchList(list.movie.id)}> Delete </button>
@@ -46,7 +50,11 @@ const {watchlist,tv_watchlist, removeMovieFromWatchList, removeTvFromWatchList} 
                 tv_watchlist.map((list, i)=>(
                     <div key ={i}>
                     <div className="card-container">
-                        <img src ={list.tv.poster_path} alt="poster"></img>
+                      {list.tv.poster_path === "https://image.tmdb.org/t/p/w185undefined" || 
+                        list.tv.poster_path === "https://image.tmdb.org/t/p/w185null" ? (
+                            <div className="filler-poster"></div>):(
+                            <img src ={list.tv.poster_path} alt="poster"/>
+                            )}
                         <div className="btn-rows">
                             <button className="ctrl-btn"
                             onClick={() =>removeTvFromWatchList(list.tv.id)} > Delete </button>

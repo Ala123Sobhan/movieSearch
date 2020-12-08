@@ -66,17 +66,30 @@
   background-size: cover;
 }
 
+@media (min-width: 1504px) and (max-width: 1640px){
+  .info-container{
+    width: 100%;
+    background-size:90%;
+  }
+}
+
 .pageInfo-desc {
   justify-content: center;
   align-items: center;
   opacity: 1;
   color: #fff;
 }
+@media (min-width: 1504px) and (max-width: 1640px){
+  .pageInfo-desc{
+    padding: 2rem;
+    padding-right: 13.5rem;
+  }
+}
 
 .pageInfo-title {
   opacity: 1;
   color: #fff;
-  padding-top: 10rem;
+  padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +102,6 @@
   color: #fff;
   padding-left: 20rem;
   padding-right: 20rem;
-text-align: center;
   font-size: 2rem;
   line-height: 2rem;
   text-align: justify;
@@ -308,10 +320,9 @@ header .nav-links li:last-child {
   margin-bottom: 20px;
 }
 
-.result-card .poster-wrapper img,
 .filler-poster {
-  width: 75px;
-  height: 113px;
+  width: 185px;
+  height: 278px;
   background-color: #dbdada;
   border-radius: 5px;
   margin-right: 15px;
@@ -483,7 +494,19 @@ header .nav-links li:last-child {
 
 @media (min-width: 1330px) and (max-width: 1440px){
   .card-container {
-    width: 93%;
+    width: 98%;
+  }
+}
+
+@media (min-width: 1450px) and (max-width: 1504px){
+  .card-container {
+    width: 88.5% ;
+  }
+}
+
+@media (min-width: 1540px) and (max-width: 1640px){
+  .card-container {
+    width: 85%;
   }
 }
 
