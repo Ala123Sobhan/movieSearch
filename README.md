@@ -1,6 +1,8 @@
 # Getting Started with the Moive Search App
 
-![alt text] (homePage.png)
+<img src = "src/homePage.png">
+
+<img src = "src/homePage.png" width 200>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
