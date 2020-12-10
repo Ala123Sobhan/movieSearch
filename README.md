@@ -10,6 +10,11 @@ The movie search app's purpose is to search your favorite movies and tv shows! O
 by the TMDB Api servie, so you can look up from classics, to the next big hit in seconds!
 You'll be able to add your favorite movies and tv shows to the watchlist and keep track of them.
 
+## Built With
+
+* [React] (https://reactjs.org/)
+* [Bootstrap] (https://getbootstrap.com)
+
 <img src = "src/movieWatchlist.png">
 <img src = "src/tvWatchlist.png">
 
