@@ -12,8 +12,8 @@ You'll be able to add your favorite movies and tv shows to the watchlist and kee
 
 ## Built With
 
-* [React] (https://reactjs.org/)
-* [Bootstrap] (https://getbootstrap.com)
+* [React](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com)
 
 <img src = "src/movieWatchlist.png">
 <img src = "src/tvWatchlist.png">
