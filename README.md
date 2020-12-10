@@ -2,9 +2,16 @@
 
 <img src = "src/homePage.png">
 
-<img src = "src/homePage.png" width 200>
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Usage
+
+The movie search app's purpose is to search your favorite movies and tv shows! Our data is used
+by the TMDB Api servie, so you can look up from classics, to the next big hit in seconds!
+You'll be able to add your favorite movies and tv shows to the watchlist and keep track of them.
+
+<img src = "src/movieWatchlist.png">
+<img src = "src/tvWatchlist.png">
 
 ## Available Scripts
 
