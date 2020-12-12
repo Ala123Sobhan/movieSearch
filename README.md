@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Getting Started with the Moive Search App
+
+<img src = "src/homePage.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Usage
+
+The movie search app's purpose is to search your favorite movies and tv shows! Our data is used
+by the TMDB Api servie, so you can look up from classics, to the next big hit in seconds!
+You'll be able to add your favorite movies and tv shows to the watchlist and keep track of them.
+
+## Built With
+
+* [React](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com)
+
+<img src = "src/movieWatchlist.png">
+<img src = "src/tvWatchlist.png">
+
+## Speech Recognition
+
+<img src = "src/movieVoice.png">
+
+Speech renognition allow's the user to use the speech recognition option, rather than type in their search input.
+Once you click the "voice" button, you can say the movie or tv show you want search, and once you press the "stop"
+button to stop the recording, the website will give you the search result, based on what you have said.
 
 ## Available Scripts
 
