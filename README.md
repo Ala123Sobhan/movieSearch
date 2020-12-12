@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-View ur website live! : https://motion-picture-app.herokuapp.com/
+View our website [live!](https://motion-picture-app.herokuapp.com/)
 
 ## Usage
 
