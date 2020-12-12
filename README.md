@@ -4,6 +4,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+View our website [live!](https://motion-picture-app.herokuapp.com/)
+
 ## Usage
 
 The movie search app's purpose is to search your favorite movies and tv shows! Our data is used
