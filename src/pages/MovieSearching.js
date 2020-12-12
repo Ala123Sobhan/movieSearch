@@ -148,6 +148,7 @@ function MovieSearching() {
                 
                 </div>
                 <div> {rows}</div>
+                
                 <Modal className="modal-container" aria-labelledby="contained-modal-title-vcenter"
                 show={show}
                 onHide={handleClose}
