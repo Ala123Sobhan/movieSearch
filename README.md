@@ -24,7 +24,7 @@ You'll be able to add your favorite movies and tv shows to the watchlist and kee
 
 <img src = "src/movieVoice.png">
 
-Speech renognition allow's the user to use the speech recognition option, rather than type in their search input.
+Speech recognition allows the user to use the voice search option, rather than type in their search input.
 Once you click the "voice" button, you can say the movie or tv show you want search, and once you press the "stop"
 button to stop the recording, the website will give you the search result, based on what you have said.
 
