@@ -9,7 +9,7 @@ View our website [live!](https://motion-picture-app.herokuapp.com/)
 ## Usage
 
 The movie search app's purpose is to search your favorite movies and tv shows! Our data is used
-by the TMDB Api servie, so you can look up from classics, to the next big hit in seconds!
+by the TMDB Api service, so you can look up from classics, to the next big hit in seconds!
 You'll be able to add your favorite movies and tv shows to the watchlist and keep track of them.
 
 ## Built With
