@@ -1,4 +1,4 @@
-# Getting Started with the Moive Search App
+# Getting Started with the Movie Search App
 
 <img src = "src/homePage.png">
 
